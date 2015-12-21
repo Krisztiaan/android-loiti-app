@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <hu.artklikk.android.loiti.ui.view.ArrowUp
+        android:id="@+id/item_slot_with_controls_up_button"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="@dimen/slot_arrow_padding" />
+
+    <ViewStub
+        android:id="@+id/item_slot_with_controls_slot_stub"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:inflatedId="@+id/item_slot_with_controls_slot" />
+
+    <hu.artklikk.android.loiti.ui.view.ArrowDown
+        android:id="@+id/item_slot_with_controls_down_button"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="@dimen/slot_arrow_padding" />
+
+</merge>

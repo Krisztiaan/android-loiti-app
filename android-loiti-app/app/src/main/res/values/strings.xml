@@ -1,0 +1,193 @@
+<resources>
+
+    <string name="app_name">Loiti</string>
+    <string name="app_name_capital">LOITI</string>
+    
+    <string name="reg_name_hint">Írja ide a kedves nevét</string>
+    <string name="reg_pass_tip">Válasszon jelszót a figurák kombinációjából</string>
+    <string name="reg_fb_login">FACEBOOK LOGIN</string>
+    <string name="reg_or">VAGY</string>
+    
+    <string name="main_table_text">Asztalt foglalnék</string>
+    <string name="main_inside_gift_text">MEGNÉZEM AZ\nAJÁNDÉKOM</string>
+    <string name="main_inside_has_no_table_text">MÉG NINCS\nASZTALOM</string>
+    
+    <string name="menu_gift_notification">AJÁNDÉK\nÉRTESITÉS</string>
+    <string name="menu_main">KEZDŐLAP</string>
+    <string name="menu_registration">REGISZTRÁCIÓ</string>
+    <string name="menu_login">BELÉPÉS</string>
+    <string name="menu_profile">PROFILOM</string>
+    <string name="menu_gifts">AJÁNDÉKAIM</string>
+    <string name="menu_daily_menu">NAPI MENÜ</string>
+    <string name="menu_weekly_menu">HETI MENÜ</string>
+    <string name="menu_alacarte">ALACARTE</string>
+    <string name="menu_chefs_secrets">SÉF TITKAI</string>
+    <string name="menu_faq">FAQ</string>
+    <string name="menu_contact">KAPCSOLAT</string>
+    <string name="menu_terms_conditions">FELHASZNÁLÁSI FELTÉTELEK</string>
+    <string name="menu_payment">FIZETÉS</string>
+    <string name="menu_qr_reader">QR OLVASÓ</string>
+    <string name="menu_visitors_book">VENDÉGKÖNYV</string>
+    <string name="menu_language_identifier">EN</string>
+    
+    <string name="dialog_dont_show">NE JELENJEN MEG TÖBBET\nEZ A FIGYELMEZTETÉS</string>
+    <string name="dialog_ok">ÉRTETTEM</string>
+    <string name="dialog_ok_send">ELKÜLD</string>
+    <string name="dialog_qr_read">A QR KÓD\nBEOLVASÁSÁVAL\nTUDSZ RENDELNI\nVAGY PINCÉRT HÍVNI</string>
+    <string name="dialog_has_no_table">KÉRÉSÉT\nJELEZTÜK\nFELSZOLGÁLÓNK\nFELÉ, AKI HAMAROSAN\nRENDELKEZÉSÉRE ÁLL</string>
+    <string name="dialog_come_closer_choose_gift">GYERE BE\nÉTTERMÜNKBE,\nHOGY ASZTALT\nFOGLALHASS</string>
+    <string name="dialog_come_closer_reserve_table">GYERE BE\nÉTTERMÜNKBE,\nÉS VÁLASZD KI\nAZ AJÁNDÉKOD</string>
+    <string name="dialog_a_la_carte_not_available">AZ A LA CARTE ÉTLAP\nNEM ELÉRHETŐ.\nNÉZZ VISSZA KÉSŐBB!</string>
+    <string name="dialog_faq_not_available">A GYAKORI KÉRDÉSEK MENÜPONT\nNEM ELÉRHETŐ.\nNÉZZ VISSZA KÉSŐBB!</string>
+    
+    <string name="main_at_table_menu">MENÜ</string>
+    <string name="main_at_table_todays_menu">MAI MENÜ</string>
+    <string name="main_at_table_a_la_carte">A LA CARTE</string>
+    <string name="main_at_table_a_la_carte_recommendation">AJÁNLAT ÉTLAPUNKRÓL</string>
+    <string name="main_at_table_gift">MEGNÉZEM AZ\nAJÁNDÉKOM</string>
+    <string name="main_at_table_waiter_caller">PINCÉRHÍVÓ</string>
+    <string name="main_at_table_table_number">ASZTALSZÁM: $1$d</string>
+    
+    <string name="far_header_login">BELÉPEK</string>
+    <string name="far_header_or">vagy</string>
+    <string name="far_header_register">REGISZTRÁLOK</string>
+    
+    <string name="far_daily_header_today">MAI MENÜ</string>
+    <string name="far_daily_header_tomorrow">HOLNAPI MENÜ</string>
+    
+    <string name="registration_header">REGISZTRÁCIÓ</string>
+    <string name="registration_take_photo_text">FOTÓ KÉSZÍTÉSE&lt;sup&gt;*&lt;/sup&gt;</string>
+    <string name="registration_name_hint">Írja ide a kedves nevét</string>
+    <string name="registration_email_hint">Valamint az email címét</string>
+    <string name="registration_phone_hint">Telefonszám</string>
+    <string name="registration_star_text">&lt;sup&gt;*&lt;/sup&gt;a csillaggal jelölt mezők kitöltése kötelező!</string>
+    <string name="registration_slotmachine_text">Válasszon jelszót a számok kombinációjából</string>
+    <string name="registration_register_text">REGISZTRÁLOK</string>
+    <string name="registration_facebook_login_text">FACEBOOK LOGIN</string>
+    <string name="registration_picture_dialog_header">Válassz fotót</string>
+    
+    <string name="login_slotmachine_text">Válasszon jelszót a számok kombinációjából</string>
+    <string name="login_login_text">BELÉPEK</string>
+    <string name="login_email_hint">Írja be email címét</string>
+
+    <string name="main_register">REGISZTRÁCIÓ</string>
+    <string name="main_login">BELÉPÉS</string>
+    <string name="main_my_profile">PROFILOM</string>
+    <string name="main_my_gifts">AJÁNDÉKAIM</string>
+    <string name="main_daily_menu">NAPI MENÜ</string>
+    <string name="main_weekly_menu">HETI MENÜ</string>
+    <string name="main_a_la_carte">ALACARTE</string>
+    <string name="main_chefs_secrets">SÉF TITKAI</string>
+    <string name="main_payment">FIZETÉS</string>
+    <string name="main_qr_reader">QR OLVASÓ</string>
+    
+    <string name="slot_zero">0</string>
+    <string name="slot_one">1</string>
+    <string name="slot_two">2</string>
+    <string name="slot_three">3</string>
+    <string name="slot_four">4</string>
+    <string name="slot_five">5</string>
+    <string name="slot_six">6</string>
+    <string name="slot_seven">7</string>
+    <string name="slot_eight">8</string>
+    <string name="slot_nine">9</string>
+    
+    <string name="profile_new_photo">ÚJ KÉP</string>
+    <string name="profile_name_hint">Név</string>
+    <string name="profile_email_hint">Email cím</string>
+    <string name="profile_phone_hint">Telefon szám</string>
+    <string name="profile_change_password">JELSZÓ CSERE</string>
+    <string name="profile_save">MENTÉS</string>
+    
+    <string-array name="weekly_menu_day_names">
+        <item>HÉTFŐ</item>
+        <item>KEDD</item>
+        <item>SZERDA</item>
+        <item>CSÜTÖRTÖK</item>
+        <item>PÉNTEK</item>
+        <item>SZOMBAT</item>
+        <item>VASÁRNAP</item>
+    </string-array>
+    
+    <string name="weekly_header">NAPI MENÜ</string>
+    
+    <string name="featured_menu_header">HETI MENÜ</string>
+    
+    <string name="qr_reader_search_for_qr_on_desk">KERESD A QR KÓDOT\nAZ ASZTALOKON</string>
+    
+    <string name="payment_header">FIZETÉS</string>
+    <string name="payment_no_bill">NEM KÉREK SZÁMLÁT</string>
+    <string name="payment_bill">KÉREK SZÁMLÁT</string>
+    <string name="payment_cash">KÉSZPÉNZZEL FIZETNÉK</string>
+    <string name="payment_card">BANKKÁRTYÁVAL FIZETNÉK</string>
+    
+    <string name="bill_header">SZÁMLA ADATAI</string>
+    <string name="bill_send">ELKÜLD</string>
+    <string name="bill_name_hint">Cég vagy E.v. név</string>
+    <string name="bill_tax_number_hint">Adószám</string>
+    <string name="bill_postal_code_hint">Irányítószám</string>
+    <string name="bill_city_hint">Település</string>
+    <string name="bill_address_hint">Cím</string>
+    
+    <string name="visitors_book_header">VENDÉGKÖNYV</string>
+    <string name="visitors_book_spinner_prompt">Válasszon témakört</string>
+    <string name="visitors_book_text_hint">Szöveges értékelés</string>
+    <string name="visitors_book_send">ELKÜLD</string>
+    <string-array name="visitors_book_spinner_items">
+        <item>Applikáció</item>
+        <item>Étterem</item>
+        <item>Kiszolgálás</item>
+        <item>Étel</item>
+    </string-array>
+    
+    <string name="gifts_visit_count_head">MÁR</string>
+    <string name="gifts_visit_count_tail">ALKALOMMAL JÁRTÁL ÉTTERMÜNKBEN</string>
+    
+    <string name="faq_header">FAQ</string>
+    
+    <string name="chefs_secrets_header">SÉF TITKAI</string>
+    
+    <string name="terms_conditions_header">FELHASZNÁLÁSI FELTÉTELEK</string>
+    <string-array name="terms_conditions_headers">
+        <item>1. General information</item>
+        <item>2. Data protection clause</item>
+        <item>2.1 Purpose of data collection</item>
+        <item>2.2 Information on processed data</item>
+        <item>2.3 Your rights in connection with data protection</item>
+        <item>2.4 Data Protection</item>
+    </string-array>
+    <string-array name="terms_conditions_descriptions">
+        <item>Thank you for using the services provided by LOITI software (hereinafter Services). You accept the general terms and conditions by using the services. Please, read the general terms and conditions given below carefully.\n\nThe Services are provided by OPUS Mobile Kereskedelmi és Szolgáltató Korlátolt Felelősségű Társaság (private limited-liabilty company), (registered seat: 2100 Gödöllő, Kossuth Lajos utca 12., registration number: Cg.13-09-114575) (hereinafter OPUS Kft.).</item>
+        <item>The OPUS Kft. processes and protects personal data in the course of using the Services in accordance with relevant data protection laws.</item>
+        <item>The OPUS Kft. uses your data only for the purpose of registering you on the software to enable you to use the Services; for the provision, monitoring, revision and development of the Services; for the fulfilment of every contractual obligation of OPUS Kft. and for communicating with you in connection with the above as well as when the process of your data is part of procedures relating to contractual obligations and of consumer protection.\n\nOPUS Kft. stores some information about you as long as it is necessary and eligible to serve the attainment of the purpose the data were collected for, as well as until any legal regulations or contracts allow it. OPUS Kft. does not collect any unnecessary volume of or any unnecessary information or any information which are unsuitable for meeting the aim set before.</item>
+        <item>Upon your request, OPUS Kft. will inform you about the data managed by itself and/or the data processed by itself or by the commissioned data controller, and about the source of these data, the purpose, the legal basis, the duration of the data management, about the name, address and data management-related activity of the data processor as well as, in case your personal data are forwarded, about the legal basis and addressee thereof.\n\nOPUS Kft. does not make your personal data accessible for any third party, excluding the cases when (according to legal regulations) the disclosure of your personal date to other companies, financial institutions or to public bodies is necessary and desirable for purposes of crime prevention and customer protection, and if it is stipulated and permitted by law.\n\nDuring disclosure of your personal data to third parties OPUS Kft. is always compliant with the legal regulation on data protection.</item>
+        <item>According to the data protection regulation you are entitled to request for some information on the management of your personal data any time. Information is given free of charge by OPUS Kft. within 30 (thirty) days after the submission of the request. If you have any request to us relating to the management of your personal data, OPUS Kft. asks you to please contact us as written on the software.\n\nYou have the right (I) to request information on the management of your personal data, (II) to request the correction, cancellation (excluding the case of compulsory data management) and blocking of your personal data, (III) to protest against the management of your personal data in cases defined in the legal regulations on data protection, (IV) to turn to the competent court or authority if your rights are violated or in other cases defined by law, (V) to demand compensation for damage caused by unlawful data management or by the violation of data security provisions. OPUS Kft. directs your attention to certain cases, in connection with the data management defined in this information, the data controller may manage your personal data according to Section 6 (5) of Act CXII of 2011 on Informational Self-determination and Freedom of Information. This means that the management of personal data may be necessary for the fulfilment of certain legal obligations of the data controller or for the observation of the legitimate interest of third parties. In these cases personal data may be managed even if you have withdrawn your permission thereto. You may ask for further information from the data controller at his contact points.</item>
+        <item>It is the obligation of OPUS Kft. to provide protection for your personal data. OPUS Kft. has introduced new physical, electronic and administrative procedures for the protection of your personal data from unauthorised access, modification, transmission, publication cancellation or destruction, furthermore from inaccessibility caused by causal destruction, damage or by the modification of the applied technology. OPUS Kft. pays particular attention to the protection of your personal data from unlawful and unauthorised procedure during data management. Despite all of these measures OPUS Kft. cannot fully guarantee the security of your data.\n\nOPUS Kft. provides security for your data by the following means: usage of encoding where possible, password protection where applicable, limitation of the access to information (i.e. only those employees gain access to these data for whom it is important for the attainment of the purposes written above.) OPUS Kft. requests you to help protecting the information by using nonobvious login name and password, by regular modification of your password. OPUS Kft. also requests you not to make your password accessible for any other person.</item>
+    </string-array>
+    
+    <string name="contact_header">KAPCSOLAT</string>
+    
+    <string name="popup_cancel">MÉGSEM</string>
+    <string name="popup_register">A MENÜPONT HASZNÁLATA REGISZTRÁCIÓHOZ KÖTÖTT.</string>
+    <string name="popup_inside_only">A FUNKCIÓ CSAK AZ ÉTTEREMBEN ELÉRHETŐ!</string>
+    <string name="popup_register_agree_text">REGISZTRÁLOK</string>
+    <string name="popup_profile_photo_required">FOTÓ FELTÖLTÉSE KÖTELEZŐ!</string>
+    <string name="popup_profile_save_successful">SIKERES MENTÉS!</string>
+    <string name="popup_profile_save_failed">SIKERTELEN MENTÉS!</string>
+    <string name="popup_registration_name_required">A NÉV KITÖLTÉSE KÖTELEZŐ!</string>
+    <string name="popup_registration_email_already_registered">EZ AZ EMAIL MÁR REGISZTRÁLVA VAN!</string>
+    <string name="popup_registration_email_required">AZ EMAIL KITÖLTÉSE KÖTELEZŐ!</string>
+    <string name="popup_registration_email_invalid_format">AZ EMAIL FORMÁTUMA NEM MEGFELELŐ!</string>
+    <string name="popup_registration_password_required">JELSZÓ VÁLASZTÁSA KÖTELEZŐ!</string>
+    <string name="popup_login_invalid_credentials">AZ EMAIL CÍM VAGY A JELSZÓ NEM MEGFELELŐ!</string>
+    <string name="popup_qr_reader_welcome">Üdvözlünk éttermünkben!\nAsztalod száma: %1$d</string>
+    <string name="popup_qr_reader_failed">A KÓD BEOLVASÁSA\nNEM SIKERÜLT.</string>
+    <string name="popup_payment_need_bill">PIPÁLD BE\nKÉRSZ-E\nSZÁMLÁT!</string>
+    <string name="popup_bill_data_required">AZ ADATOK MEGADÁSA KÖTELEZŐ!</string>
+    <string name="popup_review_header">ÁLLÍTSD BE\nAZ ÉRTÉKELÉSED</string>
+    <string name="popup_visitors_book_category_required">A KATEGÓRIA MEGADÁSA KÖTELEZŐ!</string>
+    <string name="popup_visitors_book_input_required">ÉRTÉKELÉS MEGADÁSA KÖTELEZŐ!</string>
+    <string name="popup_visitors_book_fail">AZ ÉRTÉKELÉS ELKÜLDÉSE NEM SIKERÜLT</string>
+    <string name="popup_gifts_not_visited">SAJNOS MÉG NEM VÁLASZTHATSZ AJÁNDÉKOT</string>
+    
+</resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="coral_red" type="color">#FFFF7D7D</item>
+    <item name="royal_blue" type="color">#FF19557D</item>
+    <item name="shell_white" type="color">#FFFFFAEB</item>
+    <item name="coral_red_80" type="color">#CCFF7D7D</item>
+    <item name="royal_blue_80" type="color">#CC19557D</item>
+    <item name="shell_white_80" type="color">#CCFFFAEB</item>
+    <item name="coral_red_60" type="color">#99FF7D7D</item>
+    <item name="royal_blue_60" type="color">#9919557D</item>
+    <item name="shell_white_60" type="color">#99FFFAEB</item>
+    <item name="coral_red_40" type="color">#66FF7D7D</item>
+    <item name="royal_blue_40" type="color">#6619557D</item>
+    <item name="shell_white_40" type="color">#66FFFAEB</item>
+    <item name="coral_red_20" type="color">#33FF7D7D</item>
+    <item name="royal_blue_20" type="color">#3319557D</item>
+    <item name="shell_white_20" type="color">#33FFFAEB</item>
+    
+    <item name="dialog_blue" type="color">#FF155175</item>
+    
+    <color name="loiti_orange">#FFF29840</color>
+    <color name="loiti_white">#FFFFFAEB</color>
+    <color name="loiti_gray">#FF3C4856</color>
+    <color name="loiti_gray_dark">#FF242B34</color>
+    
+    <color name="loiti_orange_semitransparent">#88F29840</color>
+    <color name="loiti_white_semitransparent">#88FFFAEB</color>
+    <color name="loiti_gray_semitransparent">#883C4856</color>
+    
+    <color name="loiti_white_semitransparent_menu">#EEFFFAEB</color>
+
+</resources>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/hu.artklikk.android.loiti"
+    android:id="@+id/activity_qr_reader_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <FrameLayout
+        android:id="@+id/activity_qr_reader_preview_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <hu.artklikk.android.loiti.ui.core.LTextView
+        android:id="@+id/activity_qr_reader_bottom_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_size"
+        android:layout_alignParentBottom="true"
+        android:background="@color/loiti_gray"
+        android:gravity="center"
+        android:text="@string/qr_reader_search_for_qr_on_desk"
+        android:textColor="@color/loiti_white"
+        android:textSize="14sp" />
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/activity_qr_reader_bottom_text" >
+
+        <android.support.percent.PercentRelativeLayout
+            android:layout_centerInParent="true"
+            app:layout_aspectRatio="200%"
+            app:layout_widthPercent="56%" >
+
+            <View
+                android:id="@+id/activity_qr_reader_square"
+                android:layout_centerInParent="true"
+                app:layout_aspectRatio="100%"
+                app:layout_widthPercent="50%"
+                android:background="@drawable/border_white_3dp" />
+
+            <hu.artklikk.android.loiti.ui.view.Stripes
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignBottom="@id/activity_qr_reader_square"
+                android:layout_alignTop="@id/activity_qr_reader_square"
+                android:layout_toLeftOf="@id/activity_qr_reader_square"
+                app:orientation="up"
+                app:stripeColor="@color/loiti_white_semitransparent"
+                app:stripeSize="8dp" />
+
+            <hu.artklikk.android.loiti.ui.view.Stripes
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignBottom="@id/activity_qr_reader_square"
+                android:layout_alignTop="@id/activity_qr_reader_square"
+                android:layout_toRightOf="@id/activity_qr_reader_square"
+                app:orientation="up"
+                app:stripeColor="@color/loiti_white_semitransparent"
+                app:stripeSize="8dp" />
+            
+        </android.support.percent.PercentRelativeLayout>
+        
+    </android.support.percent.PercentRelativeLayout>
+
+</RelativeLayout>

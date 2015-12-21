@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <hu.artklikk.android.loiti.ui.core.LTextView
+        android:id="@+id/item_slot_numbers_0"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:text="@string/slot_zero"
+        android:textColor="@color/loiti_gray"
+        android:textSize="@dimen/slot_number_size"
+        android:textStyle="bold" />
+
+    <hu.artklikk.android.loiti.ui.core.LTextView
+        android:id="@+id/item_slot_numbers_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:text="@string/slot_one"
+        android:textColor="@color/loiti_gray"
+        android:textSize="@dimen/slot_number_size"
+        android:textStyle="bold" />
+
+    <hu.artklikk.android.loiti.ui.core.LTextView
+        android:id="@+id/item_slot_numbers_2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:text="@string/slot_two"
+        android:textColor="@color/loiti_gray"
+        android:textSize="@dimen/slot_number_size"
+        android:textStyle="bold" />
+
+    <hu.artklikk.android.loiti.ui.core.LTextView
+        android:id="@+id/item_slot_numbers_3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:text="@string/slot_three"
+        android:textColor="@color/loiti_gray"
+        android:textSize="@dimen/slot_number_size"
+        android:textStyle="bold" />
+
+    <hu.artklikk.android.loiti.ui.core.LTextView
+        android:id="@+id/item_slot_numbers_4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:text="@string/slot_four"
+        android:textColor="@color/loiti_gray"
+        android:textSize="@dimen/slot_number_size"
+        android:textStyle="bold" />
+
+    <hu.artklikk.android.loiti.ui.core.LTextView
+        android:id="@+id/item_slot_numbers_5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:text="@string/slot_five"
+        android:textColor="@color/loiti_gray"
+        android:textSize="@dimen/slot_number_size"
+        android:textStyle="bold" />
+
+    <hu.artklikk.android.loiti.ui.core.LTextView
+        android:id="@+id/item_slot_numbers_6"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:text="@string/slot_six"
+        android:textColor="@color/loiti_gray"
+        android:textSize="@dimen/slot_number_size"
+        android:textStyle="bold" />
+
+    <hu.artklikk.android.loiti.ui.core.LTextView
+        android:id="@+id/item_slot_numbers_7"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:text="@string/slot_seven"
+        android:textColor="@color/loiti_gray"
+        android:textSize="@dimen/slot_number_size"
+        android:textStyle="bold" />
+
+    <hu.artklikk.android.loiti.ui.core.LTextView
+        android:id="@+id/item_slot_numbers_8"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:text="@string/slot_eight"
+        android:textColor="@color/loiti_gray"
+        android:textSize="@dimen/slot_number_size"
+        android:textStyle="bold" />
+
+    <hu.artklikk.android.loiti.ui.core.LTextView
+        android:id="@+id/item_slot_numbers_9"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:text="@string/slot_nine"
+        android:textColor="@color/loiti_gray"
+        android:textSize="@dimen/slot_number_size"
+        android:textStyle="bold" />
+
+</merge>

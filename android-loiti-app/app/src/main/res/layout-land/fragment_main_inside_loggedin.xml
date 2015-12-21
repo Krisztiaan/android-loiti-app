@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_main_inside_loggedin_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="22dp" >
+
+    <View
+        android:id="@+id/fragment_main_inside_loggedin_line_0"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginBottom="@dimen/far_screen_line_margin"
+        android:background="@color/loiti_gray" />
+
+    <hu.artklikk.android.loiti.ui.core.LTextView
+        android:id="@+id/fragment_main_inside_loggedin_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/far_screen_line_margin"
+        android:padding="@dimen/far_text_padding"
+        android:text="@string/main_payment"
+        android:textColor="@color/loiti_gray"
+        android:textSize="@dimen/far_text_size" />
+
+    <hu.artklikk.android.loiti.ui.core.LTextView
+        android:id="@+id/fragment_main_inside_loggedin_qr_reader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/far_screen_line_margin"
+        android:padding="@dimen/far_text_padding"
+        android:text="@string/main_qr_reader"
+        android:textColor="@color/loiti_gray"
+        android:textSize="@dimen/far_text_size" />
+
+    <View
+        android:id="@+id/fragment_main_inside_loggedin_line_1"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginBottom="@dimen/far_screen_line_margin"
+        android:layout_marginTop="@dimen/far_screen_line_margin"
+        android:background="@color/loiti_gray" />
+
+    <hu.artklikk.android.loiti.ui.core.LTextView
+        android:id="@+id/fragment_main_inside_loggedin_my_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/far_screen_line_margin"
+        android:padding="@dimen/far_text_padding"
+        android:text="@string/main_my_profile"
+        android:textColor="@color/loiti_gray"
+        android:textSize="@dimen/far_text_size" />
+
+    <hu.artklikk.android.loiti.ui.core.LTextView
+        android:id="@+id/fragment_main_inside_loggedin_my_gifts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/far_screen_line_margin"
+        android:padding="@dimen/far_text_padding"
+        android:text="@string/main_my_gifts"
+        android:textColor="@color/loiti_gray"
+        android:textSize="@dimen/far_text_size" />
+
+    <View
+        android:id="@+id/fragment_main_inside_loggedin_line_2"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginBottom="@dimen/far_screen_line_margin"
+        android:layout_marginTop="@dimen/far_screen_line_margin"
+        android:background="@color/loiti_gray" />
+
+    <hu.artklikk.android.loiti.ui.core.LTextView
+        android:id="@+id/fragment_main_inside_loggedin_chefs_secrets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/far_screen_line_margin"
+        android:padding="@dimen/far_text_padding"
+        android:text="@string/main_chefs_secrets"
+        android:textColor="@color/loiti_gray"
+        android:textSize="@dimen/far_text_size" />
+
+    <View
+        android:id="@+id/fragment_main_inside_loggedin_line_3"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginBottom="@dimen/far_screen_line_margin"
+        android:layout_marginTop="@dimen/far_screen_line_margin"
+        android:background="@color/loiti_gray" />
+
+    <hu.artklikk.android.loiti.ui.core.LTextView
+        android:id="@+id/fragment_main_inside_loggedin_daily_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/far_screen_line_margin"
+        android:padding="@dimen/far_text_padding"
+        android:text="@string/main_daily_menu"
+        android:textColor="@color/loiti_gray"
+        android:textSize="@dimen/far_text_size" />
+
+    <hu.artklikk.android.loiti.ui.core.LTextView
+        android:id="@+id/fragment_main_inside_loggedin_weekly_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/far_screen_line_margin"
+        android:padding="@dimen/far_text_padding"
+        android:text="@string/main_weekly_menu"
+        android:textColor="@color/loiti_gray"
+        android:textSize="@dimen/far_text_size" />
+
+    <hu.artklikk.android.loiti.ui.core.LTextView
+        android:id="@+id/fragment_main_inside_loggedin_a_la_carte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/far_screen_line_margin"
+        android:padding="@dimen/far_text_padding"
+        android:text="@string/main_a_la_carte"
+        android:textColor="@color/loiti_gray"
+        android:textSize="@dimen/far_text_size" />
+
+</LinearLayout>

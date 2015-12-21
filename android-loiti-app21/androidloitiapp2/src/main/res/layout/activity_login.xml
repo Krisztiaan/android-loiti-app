@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_login_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/loiti_white"
+    android:focusable="true"
+    android:focusableInTouchMode="true" >
+
+    <hu.artklikk.android.loiti.ui.core.LTextView
+        android:id="@+id/activity_login_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="60dp"
+        android:text="@string/login_slotmachine_text"
+        android:textColor="@color/loiti_gray"
+        android:textSize="14sp" />
+
+    <hu.artklikk.android.loiti.ui.widget.SlotMachine_
+        android:id="@+id/activity_login_slotmachine"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_below="@id/activity_login_header"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+
+    <hu.artklikk.android.loiti.ui.core.LTextView
+        android:id="@+id/activity_login_facebook_login"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/loiti_gray"
+        android:gravity="center"
+        android:text="@string/registration_facebook_login_text"
+        android:textColor="@color/loiti_white"
+        android:textSize="16sp" />
+
+    <hu.artklikk.android.loiti.ui.core.LTextView
+        android:id="@+id/activity_login_login"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_above="@id/activity_login_facebook_login"
+        android:gravity="center"
+        android:text="@string/login_login_text"
+        android:textColor="@color/loiti_orange"
+        android:textSize="16sp" />
+
+    <hu.artklikk.android.loiti.ui.core.LEditText
+        android:id="@+id/activity_login_email"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_above="@id/activity_login_login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/border_gray_1dp"
+        android:hint="@string/login_email_hint"
+        android:imeOptions="actionDone"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:textColor="@color/loiti_gray"
+        android:textColorHint="@color/loiti_gray"
+        android:textSize="16sp" />
+
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="language_header_name"></string>
+    <string name="language_header_value"></string>
+    <string name="url_faq">http://husegp.appspot.com/admin/faq/en.html</string>
+</resources>

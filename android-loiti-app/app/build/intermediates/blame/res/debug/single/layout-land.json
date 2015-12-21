@@ -1,0 +1,82 @@
+[
+    {
+        "merged": "/Users/AndroidDevMacMini/Desktop/android-loiti-app/app/build/intermediates/res/merged/debug/layout-land/activity_visitors_book.xml",
+        "source": "/Users/AndroidDevMacMini/Desktop/android-loiti-app/app/src/main/res/layout-land/activity_visitors_book.xml"
+    },
+    {
+        "merged": "/Users/AndroidDevMacMini/Desktop/android-loiti-app/app/build/intermediates/res/merged/debug/layout-land/fragment_main_inside_loggedout.xml",
+        "source": "/Users/AndroidDevMacMini/Desktop/android-loiti-app/app/src/main/res/layout-land/fragment_main_inside_loggedout.xml"
+    },
+    {
+        "merged": "/Users/AndroidDevMacMini/Desktop/android-loiti-app/app/build/intermediates/res/merged/debug/layout-land/fragment_main_far_loggedin.xml",
+        "source": "/Users/AndroidDevMacMini/Desktop/android-loiti-app/app/src/main/res/layout-land/fragment_main_far_loggedin.xml"
+    },
+    {
+        "merged": "/Users/AndroidDevMacMini/Desktop/android-loiti-app/app/build/intermediates/res/merged/debug/layout-land/fragment_gifts_toplevel.xml",
+        "source": "/Users/AndroidDevMacMini/Desktop/android-loiti-app/app/src/main/res/layout-land/fragment_gifts_toplevel.xml"
+    },
+    {
+        "merged": "/Users/AndroidDevMacMini/Desktop/android-loiti-app/app/build/intermediates/res/merged/debug/layout-land/activity_login.xml",
+        "source": "/Users/AndroidDevMacMini/Desktop/android-loiti-app/app/src/main/res/layout-land/activity_login.xml"
+    },
+    {
+        "merged": "/Users/AndroidDevMacMini/Desktop/android-loiti-app/app/build/intermediates/res/merged/debug/layout-land/activity_bill.xml",
+        "source": "/Users/AndroidDevMacMini/Desktop/android-loiti-app/app/src/main/res/layout-land/activity_bill.xml"
+    },
+    {
+        "merged": "/Users/AndroidDevMacMini/Desktop/android-loiti-app/app/build/intermediates/res/merged/debug/layout-land/activity_alacarte.xml",
+        "source": "/Users/AndroidDevMacMini/Desktop/android-loiti-app/app/src/main/res/layout-land/activity_alacarte.xml"
+    },
+    {
+        "merged": "/Users/AndroidDevMacMini/Desktop/android-loiti-app/app/build/intermediates/res/merged/debug/layout-land/fragment_main_inside_loggedin.xml",
+        "source": "/Users/AndroidDevMacMini/Desktop/android-loiti-app/app/src/main/res/layout-land/fragment_main_inside_loggedin.xml"
+    },
+    {
+        "merged": "/Users/AndroidDevMacMini/Desktop/android-loiti-app/app/build/intermediates/res/merged/debug/layout-land/activity_payment.xml",
+        "source": "/Users/AndroidDevMacMini/Desktop/android-loiti-app/app/src/main/res/layout-land/activity_payment.xml"
+    },
+    {
+        "merged": "/Users/AndroidDevMacMini/Desktop/android-loiti-app/app/build/intermediates/res/merged/debug/layout-land/item_alacarte_sub.xml",
+        "source": "/Users/AndroidDevMacMini/Desktop/android-loiti-app/app/src/main/res/layout-land/item_alacarte_sub.xml"
+    },
+    {
+        "merged": "/Users/AndroidDevMacMini/Desktop/android-loiti-app/app/build/intermediates/res/merged/debug/layout-land/activity_profile.xml",
+        "source": "/Users/AndroidDevMacMini/Desktop/android-loiti-app/app/src/main/res/layout-land/activity_profile.xml"
+    },
+    {
+        "merged": "/Users/AndroidDevMacMini/Desktop/android-loiti-app/app/build/intermediates/res/merged/debug/layout-land/activity_registration.xml",
+        "source": "/Users/AndroidDevMacMini/Desktop/android-loiti-app/app/src/main/res/layout-land/activity_registration.xml"
+    },
+    {
+        "merged": "/Users/AndroidDevMacMini/Desktop/android-loiti-app/app/build/intermediates/res/merged/debug/layout-land/fragment_featured_gallery.xml",
+        "source": "/Users/AndroidDevMacMini/Desktop/android-loiti-app/app/src/main/res/layout-land/fragment_featured_gallery.xml"
+    },
+    {
+        "merged": "/Users/AndroidDevMacMini/Desktop/android-loiti-app/app/build/intermediates/res/merged/debug/layout-land/item_alacarte.xml",
+        "source": "/Users/AndroidDevMacMini/Desktop/android-loiti-app/app/src/main/res/layout-land/item_alacarte.xml"
+    },
+    {
+        "merged": "/Users/AndroidDevMacMini/Desktop/android-loiti-app/app/build/intermediates/res/merged/debug/layout-land/fragment_gifts_basic.xml",
+        "source": "/Users/AndroidDevMacMini/Desktop/android-loiti-app/app/src/main/res/layout-land/fragment_gifts_basic.xml"
+    },
+    {
+        "merged": "/Users/AndroidDevMacMini/Desktop/android-loiti-app/app/build/intermediates/res/merged/debug/layout-land/fragment_alacarte_category.xml",
+        "source": "/Users/AndroidDevMacMini/Desktop/android-loiti-app/app/src/main/res/layout-land/fragment_alacarte_category.xml"
+    },
+    {
+        "merged": "/Users/AndroidDevMacMini/Desktop/android-loiti-app/app/build/intermediates/res/merged/debug/layout-land/activity_main.xml",
+        "source": "/Users/AndroidDevMacMini/Desktop/android-loiti-app/app/src/main/res/layout-land/activity_main.xml"
+    },
+    {
+        "merged": "/Users/AndroidDevMacMini/Desktop/android-loiti-app/app/build/intermediates/res/merged/debug/layout-land/fragment_main_far_loggedout.xml",
+        "source": "/Users/AndroidDevMacMini/Desktop/android-loiti-app/app/src/main/res/layout-land/fragment_main_far_loggedout.xml"
+    },
+    {
+        "merged": "/Users/AndroidDevMacMini/Desktop/android-loiti-app/app/build/intermediates/res/merged/debug/layout-land/activity_featured_menu.xml",
+        "source": "/Users/AndroidDevMacMini/Desktop/android-loiti-app/app/src/main/res/layout-land/activity_featured_menu.xml"
+    },
+    {
+        "merged": "/Users/AndroidDevMacMini/Desktop/android-loiti-app/app/build/intermediates/res/merged/debug/layout-land/activity_qr_reader.xml",
+        "source": "/Users/AndroidDevMacMini/Desktop/android-loiti-app/app/src/main/res/layout-land/activity_qr_reader.xml"
+    }
+]

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/hu.artklikk.android.loiti"
+    android:id="@+id/activity_bill_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/loiti_white" >
+
+    <hu.artklikk.android.loiti.ui.core.LTextView
+        android:id="@+id/activity_bill_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_size"
+        android:padding="@dimen/header_left_padding"
+        android:text="@string/bill_header"
+        android:textColor="@color/loiti_orange"
+        android:textSize="@dimen/header_text_size"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/activity_bill_header"
+        android:padding="@dimen/header_left_padding" >
+
+        <RelativeLayout
+            android:id="@+id/activity_bill_previous_container"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/menu_size"
+            android:layout_marginBottom="@dimen/header_left_padding"
+            android:background="@color/loiti_orange" >
+
+            <ImageView
+                android:id="@+id/activity_bill_previous_apply"
+                android:layout_width="@dimen/menu_size"
+                android:layout_height="@dimen/menu_size"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/bill_icon_padding_small"
+                android:scaleType="centerInside"
+                android:src="@drawable/checkmark_white" />
+
+            <ImageView
+                android:id="@+id/activity_bill_previous_delete"
+                android:layout_width="@dimen/menu_size"
+                android:layout_height="@dimen/menu_size"
+                android:layout_toLeftOf="@id/activity_bill_previous_apply"
+                android:padding="@dimen/bill_icon_padding_large"
+                android:scaleType="centerInside"
+                android:src="@drawable/xmark_white" />
+
+            <hu.artklikk.android.loiti.ui.core.LTextView
+                android:id="@+id/activity_bill_previous_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@id/activity_bill_previous_delete"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:padding="@dimen/header_left_padding"
+                android:textAllCaps="true"
+                android:textColor="@color/loiti_white"
+                android:textSize="@dimen/header_text_size"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <hu.artklikk.android.loiti.ui.core.LEditText
+            android:id="@+id/activity_bill_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/menu_size"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_below="@id/activity_bill_previous_container"
+            android:layout_marginBottom="@dimen/header_left_padding"
+            android:background="@drawable/border_gray_1dp"
+            android:gravity="center_vertical"
+            android:hint="@string/bill_name_hint"
+            android:imeOptions="actionNext"
+            android:includeFontPadding="false"
+            android:inputType="textCapWords"
+            android:nextFocusForward="@+id/activity_bill_tax_number"
+            android:paddingLeft="@dimen/header_left_padding"
+            android:paddingRight="@dimen/header_left_padding"
+            android:textColor="@color/loiti_gray"
+            android:textColorHint="@color/loiti_gray_semitransparent"
+            android:textSize="@dimen/header_text_size" />
+
+        <RelativeLayout
+            android:id="@+id/activity_bill_send"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/menu_size"
+            android:layout_alignParentBottom="true"
+            android:background="@color/loiti_gray" >
+
+            <hu.artklikk.android.loiti.ui.view.Stripes
+                android:id="@+id/activity_bill_send_stripes_left"
+                android:layout_width="@dimen/menu_size"
+                android:layout_height="@dimen/menu_size"
+                app:orientation="up"
+                app:stripeColor="@color/loiti_white_semitransparent" />
+
+            <hu.artklikk.android.loiti.ui.view.Stripes
+                android:id="@+id/activity_bill_send_stripes_right"
+                android:layout_width="@dimen/menu_size"
+                android:layout_height="@dimen/menu_size"
+                android:layout_alignParentRight="true"
+                app:orientation="down"
+                app:stripeColor="@color/loiti_white_semitransparent" />
+
+            <hu.artklikk.android.loiti.ui.core.LTextView
+                android:id="@+id/activity_bill_send_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@id/activity_bill_send_stripes_right"
+                android:layout_toRightOf="@id/activity_bill_send_stripes_left"
+                android:background="#88000000"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@string/bill_send"
+                android:textColor="@color/loiti_white"
+                android:textSize="@dimen/header_text_size"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/activity_bill_send"
+            android:layout_below="@id/activity_bill_name"
+            android:layout_marginBottom="@dimen/header_left_padding"
+            android:background="@drawable/border_gray_1dp" >
+
+            <hu.artklikk.android.loiti.ui.core.LEditText
+                android:id="@+id/activity_bill_tax_number"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/menu_size"
+                android:background="@android:color/transparent"
+                android:digits="0123456789-"
+                android:gravity="center_vertical"
+                android:hint="@string/bill_tax_number_hint"
+                android:imeOptions="actionNext"
+                android:includeFontPadding="false"
+                android:inputType="number|phone"
+                android:nextFocusForward="@+id/activity_bill_postal_code"
+                android:paddingLeft="@dimen/header_left_padding"
+                android:paddingRight="@dimen/header_left_padding"
+                android:textColor="@color/loiti_gray"
+                android:textColorHint="@color/loiti_gray_semitransparent"
+                android:textSize="@dimen/header_text_size" />
+
+            <View
+                android:id="@+id/activity_bill_separator_0"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/activity_bill_tax_number"
+                android:background="@color/loiti_gray" />
+
+            <hu.artklikk.android.loiti.ui.core.LEditText
+                android:id="@+id/activity_bill_postal_code"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/menu_size"
+                android:layout_below="@id/activity_bill_separator_0"
+                android:background="@android:color/transparent"
+                android:digits="0123456789"
+                android:gravity="center_vertical"
+                android:hint="@string/bill_postal_code_hint"
+                android:imeOptions="actionNext"
+                android:includeFontPadding="false"
+                android:inputType="number"
+                android:maxLength="4"
+                android:nextFocusForward="@+id/activity_bill_city"
+                android:paddingLeft="@dimen/header_left_padding"
+                android:paddingRight="@dimen/header_left_padding"
+                android:textColor="@color/loiti_gray"
+                android:textColorHint="@color/loiti_gray_semitransparent"
+                android:textSize="@dimen/header_text_size" />
+
+            <View
+                android:id="@+id/activity_bill_separator_1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/activity_bill_postal_code"
+                android:background="@color/loiti_gray" />
+
+            <hu.artklikk.android.loiti.ui.core.LEditText
+                android:id="@+id/activity_bill_city"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/menu_size"
+                android:layout_below="@id/activity_bill_separator_1"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:hint="@string/bill_city_hint"
+                android:imeOptions="actionNext"
+                android:includeFontPadding="false"
+                android:inputType="textCapWords"
+                android:nextFocusForward="@+id/activity_bill_address"
+                android:paddingLeft="@dimen/header_left_padding"
+                android:paddingRight="@dimen/header_left_padding"
+                android:textColor="@color/loiti_gray"
+                android:textColorHint="@color/loiti_gray_semitransparent"
+                android:textSize="@dimen/header_text_size" />
+
+            <View
+                android:id="@+id/activity_bill_separator_2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/activity_bill_city"
+                android:background="@color/loiti_gray" />
+
+            <hu.artklikk.android.loiti.ui.core.LEditText
+                android:id="@+id/activity_bill_address"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/activity_bill_separator_2"
+                android:background="@android:color/transparent"
+                android:gravity="top"
+                android:hint="@string/bill_address_hint"
+                android:imeOptions="actionDone"
+                android:includeFontPadding="false"
+                android:inputType="textPostalAddress|textMultiLine"
+                android:padding="@dimen/header_left_padding"
+                android:textColor="@color/loiti_gray"
+                android:textColorHint="@color/loiti_gray_semitransparent"
+                android:textSize="@dimen/header_text_size" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

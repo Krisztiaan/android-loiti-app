@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dialog_out_area"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/loiti_white_semitransparent"
+    android:clickable="true" >
+
+    <RelativeLayout
+        android:layout_width="215dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" >
+
+        <RelativeLayout
+            android:id="@+id/dialog_content"
+            android:layout_width="215dp"
+            android:layout_height="215dp"
+            android:background="@color/loiti_gray"
+            android:clickable="true" >
+
+            <hu.artklikk.android.loiti.ui.core.LTextView
+                android:id="@+id/dialog_ok"
+                android:layout_width="120dp"
+                android:layout_height="63dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="#88000000"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="@string/dialog_ok"
+                android:textColor="@color/loiti_white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <hu.artklikk.android.loiti.ui.core.LTextView
+                android:id="@+id/dialog_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/dialog_ok"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:textColor="@color/shell_white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <hu.artklikk.android.loiti.ui.view.Stripes
+                android:id="@+id/stripe_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/dialog_ok"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/dialog_ok"
+                android:layout_toRightOf="@id/dialog_ok"
+                android:alpha="0.5"
+                app:orientation="down"
+                app:stripeColor="@color/loiti_white_semitransparent"
+                app:stripeSize="8dp" />
+
+            <hu.artklikk.android.loiti.ui.view.Stripes
+                android:id="@+id/stripe_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/dialog_ok"
+                android:layout_alignParentLeft="true"
+                android:layout_alignTop="@id/dialog_ok"
+                android:layout_toLeftOf="@id/dialog_ok"
+                android:alpha="0.5"
+                app:orientation="up"
+                app:stripeColor="@color/loiti_white_semitransparent"
+                app:stripeSize="8dp" />
+        </RelativeLayout>
+
+        <hu.artklikk.android.loiti.ui.core.LTextView
+            android:id="@+id/dialog_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@id/dialog_content"
+            android:background="@color/loiti_orange"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/popup_cancel"
+            android:textColor="@color/loiti_white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

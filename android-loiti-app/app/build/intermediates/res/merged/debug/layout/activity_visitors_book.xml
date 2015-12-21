@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_visitors_book_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/loiti_white" >
+
+    <hu.artklikk.android.loiti.ui.core.LTextView
+        android:id="@+id/activity_visitors_book_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_size"
+        android:padding="@dimen/header_left_padding"
+        android:text="@string/visitors_book_header"
+        android:textColor="@color/loiti_orange"
+        android:textSize="@dimen/header_text_size"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/activity_visitors_book_send_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_size"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/header_left_padding" >
+
+        <hu.artklikk.android.loiti.ui.core.LTextView
+            android:id="@+id/activity_visitors_book_send"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/loiti_gray"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/visitors_book_send"
+            android:textColor="@color/loiti_white"
+            android:textStyle="bold" />
+
+        <hu.artklikk.android.loiti.ui.view.Stripes
+            android:id="@+id/activity_visitors_book_send_stripes_left"
+            android:layout_width="@dimen/menu_size"
+            android:layout_height="@dimen/menu_size"
+            android:background="#44FFFFFF"
+            app:orientation="down"
+            app:stripeColor="@color/loiti_white_semitransparent"
+            app:stripeSize="8dp" />
+
+        <hu.artklikk.android.loiti.ui.view.Stripes
+            android:id="@+id/activity_visitors_book_send_stripes_right"
+            android:layout_width="@dimen/menu_size"
+            android:layout_height="@dimen/menu_size"
+            android:layout_alignParentRight="true"
+            android:background="#44FFFFFF"
+            app:orientation="down"
+            app:stripeColor="@color/loiti_white_semitransparent"
+            app:stripeSize="8dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/activity_visitors_book_send_container"
+        android:layout_below="@id/activity_visitors_book_header"
+        android:layout_marginLeft="@dimen/header_left_padding"
+        android:layout_marginRight="@dimen/header_left_padding"
+        android:layout_marginTop="@dimen/header_left_padding"
+        android:background="@drawable/border_gray_1dp"
+        android:orientation="vertical"
+        android:padding="1dp" >
+
+        <Spinner
+            android:id="@+id/activity_visitors_book_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/menu_size"
+            android:background="@android:color/transparent"
+            android:dropDownSelector="@null"
+            android:dropDownWidth="match_parent"
+            android:spinnerMode="dropdown" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/loiti_gray" />
+
+        <hu.artklikk.android.loiti.ui.core.LEditText
+            android:id="@+id/activity_visitors_book_input"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/loiti_white"
+            android:gravity="top|left"
+            android:hint="@string/visitors_book_text_hint"
+            android:imeOptions="actionDone"
+            android:inputType="textMultiLine|textAutoComplete"
+            android:padding="@dimen/header_left_padding"
+            android:textColor="@color/loiti_gray"
+            android:textColorHint="@color/loiti_gray_semitransparent"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</RelativeLayout>

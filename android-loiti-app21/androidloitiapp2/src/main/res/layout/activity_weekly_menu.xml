@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/hu.artklikk.android.loiti"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/loiti_white" >
+
+    <hu.artklikk.android.loiti.ui.core.LTextView
+        android:id="@+id/activity_weekly_menu_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_size"
+        android:background="@color/loiti_white"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/header_left_padding"
+        android:text="@string/weekly_header"
+        android:textColor="@color/loiti_orange"
+        android:textSize="@dimen/header_text_size"
+        android:textStyle="bold" />
+
+    <hu.artklikk.android.loiti.ui.core.LTextView
+        android:id="@+id/activity_weekly_menu_interval"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_size"
+        android:layout_below="@id/activity_weekly_menu_header"
+        android:background="@color/loiti_white"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/header_left_padding"
+        android:textColor="@color/loiti_gray"
+        android:textSize="@dimen/header_text_size" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/activity_weekly_menu_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/activity_weekly_menu_interval"
+        android:orientation="vertical"
+        app:layoutManager="LinearLayoutManager" />
+
+</RelativeLayout>

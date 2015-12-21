@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <FrameLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <hu.artklikk.android.loiti.ui.core.DynamicDrawer
+            android:id="@+id/drawer"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:background="@color/loiti_gray" />
+    </android.support.v4.widget.DrawerLayout>
+
+    <hu.artklikk.android.loiti.ui.view.MenuButton
+        android:id="@+id/menu_icon"
+        android:layout_width="@dimen/menu_size"
+        android:layout_height="@dimen/menu_size"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/loiti_gray"
+        android:padding="16dp" />
+
+</RelativeLayout>

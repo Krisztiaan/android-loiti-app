@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dialog_checkbox_out_area"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/loiti_white_semitransparent"
+    android:clickable="true" >
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="215dp"
+        android:layout_height="215dp"
+        android:layout_centerInParent="true"
+        android:background="@color/loiti_gray"
+        android:clickable="true" >
+
+        <hu.artklikk.android.loiti.ui.core.LTextView
+            android:id="@+id/dialog_checkbox_ok_button"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            app:layout_heightPercent="28%"
+            app:layout_widthPercent="57%"
+            android:background="#88000000"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/dialog_ok"
+            android:textColor="@color/loiti_white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <hu.artklikk.android.loiti.ui.view.Stripes
+            android:id="@+id/dialog_checkbox_stripe_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/dialog_checkbox_ok_button"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/dialog_checkbox_ok_button"
+            android:layout_toRightOf="@id/dialog_checkbox_ok_button"
+            android:alpha="0.5"
+            app:orientation="down"
+            app:stripeColor="@color/loiti_white_semitransparent"
+            app:stripeSize="8dp" />
+
+        <hu.artklikk.android.loiti.ui.view.Stripes
+            android:id="@+id/dialog_checkbox_stripe_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/dialog_checkbox_ok_button"
+            android:layout_alignParentLeft="true"
+            android:layout_alignTop="@id/dialog_checkbox_ok_button"
+            android:layout_toLeftOf="@id/dialog_checkbox_ok_button"
+            android:alpha="0.5"
+            app:orientation="up"
+            app:stripeColor="@color/loiti_white_semitransparent"
+            app:stripeSize="8dp" />
+
+        <ImageView
+            android:id="@+id/dialog_checkbox_checkbox"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/border_white_1dp"
+            android:padding="8dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/checkmark_white_default_empty_selected_full" />
+
+        <hu.artklikk.android.loiti.ui.core.LTextView
+            android:id="@+id/dialog_checkbox_message"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/dialog_checkbox_ok_button"
+            android:layout_below="@id/dialog_checkbox_checkbox"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/popup_payment_need_bill"
+            android:textAllCaps="true"
+            android:textColor="@color/shell_white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </android.support.percent.PercentRelativeLayout>
+
+</RelativeLayout>

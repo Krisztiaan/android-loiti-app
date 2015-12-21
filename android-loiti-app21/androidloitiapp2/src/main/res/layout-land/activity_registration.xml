@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_registration_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/loiti_white"
+    android:focusable="true"
+    android:focusableInTouchMode="true" >
+
+    <hu.artklikk.android.loiti.ui.core.LTextView
+        android:id="@+id/activity_registration_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"
+        android:text="@string/registration_slotmachine_text"
+        android:textColor="@color/loiti_gray"
+        android:textSize="14sp" />
+
+    <hu.artklikk.android.loiti.ui.core.LTextView
+        android:id="@+id/activity_registration_facebook_login"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/loiti_gray"
+        android:gravity="center"
+        android:text="@string/registration_facebook_login_text"
+        android:textColor="@color/loiti_white"
+        android:textSize="16sp" />
+
+    <hu.artklikk.android.loiti.ui.core.LTextView
+        android:id="@+id/activity_registration_register"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_above="@id/activity_registration_facebook_login"
+        android:gravity="center"
+        android:text="@string/registration_register_text"
+        android:textColor="@color/loiti_orange"
+        android:textSize="16sp" />
+
+    <ProgressBar
+        android:id="@+id/activity_registration_register_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignTop="@id/activity_registration_register"
+        android:background="@color/loiti_white"
+        android:clickable="true"
+        android:indeterminateOnly="true"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/activity_registration_input_container"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_above="@id/activity_registration_register"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/loiti_gray"
+        android:orientation="horizontal"
+        android:padding="1dp" >
+
+        <hu.artklikk.android.loiti.ui.core.LEditText
+            android:id="@+id/activity_registration_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/loiti_white"
+            android:hint="@string/registration_name_hint"
+            android:imeOptions="actionNext"
+            android:inputType="textPersonName"
+            android:nextFocusForward="@+id/activity_registration_email"
+            android:padding="6dp"
+            android:textColor="@color/loiti_gray"
+            android:textColorHint="@color/loiti_gray"
+            android:textSize="16sp" />
+
+        <Space
+            android:layout_width="1dp"
+            android:layout_height="match_parent" />
+
+        <hu.artklikk.android.loiti.ui.core.LEditText
+            android:id="@+id/activity_registration_email"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/loiti_white"
+            android:hint="@string/registration_email_hint"
+            android:imeOptions="actionDone"
+            android:inputType="textEmailAddress"
+            android:padding="6dp"
+            android:textColor="@color/loiti_gray"
+            android:textColorHint="@color/loiti_gray"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <hu.artklikk.android.loiti.ui.widget.SlotMachine_
+        android:id="@+id/activity_registration_slotmachine"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/activity_registration_input_container"
+        android:layout_alignLeft="@id/activity_registration_header"
+        android:layout_alignRight="@id/activity_registration_header"
+        android:layout_below="@id/activity_registration_header"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <hu.artklikk.android.loiti.ui.core.LTextView
+        android:id="@+id/activity_faq_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_size"
+        android:background="@color/loiti_white"
+        android:padding="@dimen/header_left_padding"
+        android:text="@string/faq_header"
+        android:textColor="@color/loiti_orange"
+        android:textSize="@dimen/header_text_size"
+        android:textStyle="bold" />
+
+    <FrameLayout
+        android:id="@+id/activity_faq_content_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/activity_faq_header"
+        android:background="@color/loiti_white" />
+
+</RelativeLayout>

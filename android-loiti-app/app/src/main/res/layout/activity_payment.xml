@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_payment_fragment_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <hu.artklikk.android.loiti.ui.core.LTextView
+            android:id="@+id/activity_payment_header"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/loiti_white"
+            android:padding="@dimen/header_left_padding"
+            android:text="@string/payment_header"
+            android:textColor="@color/loiti_orange"
+            android:textSize="@dimen/header_text_size"
+            android:textStyle="bold" />
+
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/activity_payment_item_no_bill"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/loiti_gray" >
+
+            <android.support.percent.PercentRelativeLayout
+                android:id="@+id/activity_payment_no_bill_square_container"
+                app:layout_aspectRatio="100%"
+                app:layout_heightPercent="100%"
+                android:duplicateParentState="true" >
+
+                <hu.artklikk.android.loiti.ui.view.Stripes
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:orientation="down"
+                    app:stripeColor="@color/loiti_white_semitransparent" />
+
+                <android.support.percent.PercentRelativeLayout
+                    android:layout_centerInParent="true"
+                    app:layout_heightPercent="@fraction/payment_checkbox_size_percent"
+                    app:layout_widthPercent="@fraction/payment_checkbox_size_percent"
+                    android:background="@drawable/border_white_1dp_gray_background"
+                    android:duplicateParentState="true" >
+
+                    <ImageView
+                        android:id="@+id/activity_payment_no_bill_checkbox"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_marginPercent="24%"
+                        android:duplicateParentState="true"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/checkmark_white_default_semi_selected_full" />
+                </android.support.percent.PercentRelativeLayout>
+            </android.support.percent.PercentRelativeLayout>
+
+            <hu.artklikk.android.loiti.ui.core.LTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/activity_payment_no_bill_square_container"
+                android:duplicateParentState="true"
+                android:gravity="center_vertical"
+                android:padding="@dimen/header_left_padding"
+                android:text="@string/payment_no_bill"
+                android:textColor="@color/loiti_white"
+                android:textSize="@dimen/header_text_size"
+                android:textStyle="bold" />
+        </android.support.percent.PercentRelativeLayout>
+
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/activity_payment_item_bill"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/loiti_orange" >
+
+            <android.support.percent.PercentRelativeLayout
+                android:id="@+id/activity_payment_bill_square_container"
+                app:layout_aspectRatio="100%"
+                app:layout_heightPercent="100%"
+                android:duplicateParentState="true" >
+
+                <hu.artklikk.android.loiti.ui.view.Stripes
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:orientation="up"
+                    app:stripeColor="@color/loiti_white_semitransparent" />
+
+                <android.support.percent.PercentRelativeLayout
+                    android:layout_centerInParent="true"
+                    app:layout_heightPercent="@fraction/payment_checkbox_size_percent"
+                    app:layout_widthPercent="@fraction/payment_checkbox_size_percent"
+                    android:background="@drawable/border_white_1dp_orange_background"
+                    android:duplicateParentState="true" >
+
+                    <ImageView
+                        android:id="@+id/activity_payment_bill_checkbox"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_marginPercent="24%"
+                        android:duplicateParentState="true"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/checkmark_white_default_semi_selected_full" />
+                </android.support.percent.PercentRelativeLayout>
+            </android.support.percent.PercentRelativeLayout>
+
+            <hu.artklikk.android.loiti.ui.core.LTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/activity_payment_bill_square_container"
+                android:duplicateParentState="true"
+                android:gravity="center_vertical"
+                android:padding="@dimen/header_left_padding"
+                android:text="@string/payment_bill"
+                android:textColor="@color/loiti_white"
+                android:textSize="@dimen/header_text_size"
+                android:textStyle="bold" />
+        </android.support.percent.PercentRelativeLayout>
+
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/activity_payment_item_cash"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:background="@color/loiti_white" >
+
+            <hu.artklikk.android.loiti.ui.core.LTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:padding="@dimen/header_left_padding"
+                android:text="@string/payment_cash"
+                android:textColor="@color/loiti_orange"
+                android:textSize="@dimen/header_text_size"
+                android:textStyle="bold" />
+
+            <android.support.percent.PercentRelativeLayout
+                android:layout_alignParentRight="true"
+                app:layout_aspectRatio="50%"
+                app:layout_heightPercent="100%" >
+
+                <hu.artklikk.android.loiti.ui.view.Stripes
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:orientation="up"
+                    app:stripeColor="@color/loiti_orange_semitransparent" />
+
+                <ImageView
+                    android:layout_centerInParent="true"
+                    app:layout_aspectRatio="100%"
+                    app:layout_widthPercent="@fraction/payment_checkbox_size_percent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/right_arrow_orange" />
+            </android.support.percent.PercentRelativeLayout>
+        </android.support.percent.PercentRelativeLayout>
+
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/activity_payment_item_card"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:background="@color/loiti_orange" >
+
+            <hu.artklikk.android.loiti.ui.core.LTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:padding="@dimen/header_left_padding"
+                android:text="@string/payment_card"
+                android:textColor="@color/loiti_white"
+                android:textSize="@dimen/header_text_size"
+                android:textStyle="bold" />
+
+            <android.support.percent.PercentRelativeLayout
+                android:layout_alignParentRight="true"
+                app:layout_aspectRatio="50%"
+                app:layout_heightPercent="100%" >
+
+                <hu.artklikk.android.loiti.ui.view.Stripes
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:orientation="down"
+                    app:stripeColor="@color/loiti_white_semitransparent" />
+
+                <ImageView
+                    android:layout_centerInParent="true"
+                    app:layout_aspectRatio="100%"
+                    app:layout_widthPercent="@fraction/payment_checkbox_size_percent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/right_arrow_white" />
+            </android.support.percent.PercentRelativeLayout>
+        </android.support.percent.PercentRelativeLayout>
+    </LinearLayout>
+
+</FrameLayout>

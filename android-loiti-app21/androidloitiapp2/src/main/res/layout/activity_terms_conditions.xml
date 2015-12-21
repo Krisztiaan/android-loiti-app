@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/loiti_white"
+    android:orientation="vertical" >
+
+    <hu.artklikk.android.loiti.ui.core.LTextView
+        android:id="@+id/activity_terms_conditions_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_size"
+        android:padding="@dimen/header_left_padding"
+        android:text="@string/terms_conditions_header"
+        android:textColor="@color/loiti_orange"
+        android:textSize="@dimen/header_text_size"
+        android:textStyle="bold" />
+
+    <android.support.v7.widget.RecyclerView
+        xmlns:app="http://schemas.android.com/apk/res/hu.artklikk.android.loiti"
+        android:id="@+id/activity_terms_conditions_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/header_left_padding"
+        android:orientation="vertical"
+        app:layoutManager="LinearLayoutManager" />
+
+</LinearLayout>

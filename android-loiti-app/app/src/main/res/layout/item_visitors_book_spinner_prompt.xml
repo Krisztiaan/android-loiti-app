@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/menu_size"
+    android:background="@color/loiti_white" >
+
+    <hu.artklikk.android.loiti.ui.core.LTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/header_left_padding"
+        android:text="@string/visitors_book_spinner_prompt"
+        android:textColor="@color/loiti_gray"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:layout_width="@dimen/menu_size"
+        android:layout_height="@dimen/menu_size"
+        android:layout_alignParentRight="true"
+        android:padding="16dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/down_arrow_gray" />
+
+</RelativeLayout>

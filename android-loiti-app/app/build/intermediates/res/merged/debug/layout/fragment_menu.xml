@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/loiti_gray"
+    android:orientation="vertical" >
+
+    <hu.artklikk.android.loiti.ui.core.LTextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_size"
+        android:gravity="center_vertical|right"
+        android:paddingRight="@dimen/menu_content_padding"
+        android:text="@string/menu_language_identifier"
+        android:textColor="@color/loiti_white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/menu_content_padding"
+            android:paddingLeft="@dimen/menu_content_padding"
+            android:paddingRight="@dimen/menu_content_padding" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginBottom="@dimen/menu_line_margin"
+                android:background="@color/loiti_white" />
+
+            <hu.artklikk.android.loiti.ui.core.LTextView
+                android:id="@+id/fragment_menu_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/menu_line_margin"
+                android:padding="@dimen/menu_text_padding"
+                android:text="@string/menu_main"
+                android:textColor="@color/loiti_white"
+                android:textSize="@dimen/menu_text_size" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginBottom="@dimen/menu_line_margin"
+                android:layout_marginTop="@dimen/menu_line_margin"
+                android:background="@color/loiti_white" />
+
+            <hu.artklikk.android.loiti.ui.core.LTextView
+                android:id="@+id/fragment_menu_payment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/menu_line_margin"
+                android:padding="@dimen/menu_text_padding"
+                android:text="@string/menu_payment"
+                android:textColor="@color/loiti_white"
+                android:textSize="@dimen/menu_text_size" />
+
+            <hu.artklikk.android.loiti.ui.core.LTextView
+                android:id="@+id/fragment_menu_qr_reader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/menu_line_margin"
+                android:padding="@dimen/menu_text_padding"
+                android:text="@string/menu_qr_reader"
+                android:textColor="@color/loiti_white"
+                android:textSize="@dimen/menu_text_size" />
+
+            <hu.artklikk.android.loiti.ui.core.LTextView
+                android:id="@+id/fragment_menu_visitors_book"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/menu_line_margin"
+                android:padding="@dimen/menu_text_padding"
+                android:text="@string/menu_visitors_book"
+                android:textColor="@color/loiti_white"
+                android:textSize="@dimen/menu_text_size" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginBottom="@dimen/menu_line_margin"
+                android:layout_marginTop="@dimen/menu_line_margin"
+                android:background="@color/loiti_white" />
+
+            <hu.artklikk.android.loiti.ui.core.LTextView
+                android:id="@+id/fragment_menu_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/menu_line_margin"
+                android:padding="@dimen/menu_text_padding"
+                android:text="@string/menu_profile"
+                android:textColor="@color/loiti_white"
+                android:textSize="@dimen/menu_text_size" />
+
+            <hu.artklikk.android.loiti.ui.core.LTextView
+                android:id="@+id/fragment_menu_gifts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/menu_line_margin"
+                android:padding="@dimen/menu_text_padding"
+                android:text="@string/menu_gifts"
+                android:textColor="@color/loiti_white"
+                android:textSize="@dimen/menu_text_size" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginBottom="@dimen/menu_line_margin"
+                android:layout_marginTop="@dimen/menu_line_margin"
+                android:background="@color/loiti_white" />
+
+            <hu.artklikk.android.loiti.ui.core.LTextView
+                android:id="@+id/fragment_menu_daily_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/menu_line_margin"
+                android:padding="@dimen/menu_text_padding"
+                android:text="@string/menu_daily_menu"
+                android:textColor="@color/loiti_white"
+                android:textSize="@dimen/menu_text_size" />
+
+            <hu.artklikk.android.loiti.ui.core.LTextView
+                android:id="@+id/fragment_menu_weekly_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/menu_line_margin"
+                android:padding="@dimen/menu_text_padding"
+                android:text="@string/menu_weekly_menu"
+                android:textColor="@color/loiti_white"
+                android:textSize="@dimen/menu_text_size" />
+
+            <hu.artklikk.android.loiti.ui.core.LTextView
+                android:id="@+id/fragment_menu_alacarte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/menu_line_margin"
+                android:padding="@dimen/menu_text_padding"
+                android:text="@string/menu_alacarte"
+                android:textColor="@color/loiti_white"
+                android:textSize="@dimen/menu_text_size" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginBottom="@dimen/menu_line_margin"
+                android:layout_marginTop="@dimen/menu_line_margin"
+                android:background="@color/loiti_white" />
+
+            <hu.artklikk.android.loiti.ui.core.LTextView
+                android:id="@+id/fragment_menu_chefs_secrets"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/menu_line_margin"
+                android:padding="@dimen/menu_text_padding"
+                android:text="@string/menu_chefs_secrets"
+                android:textColor="@color/loiti_white"
+                android:textSize="@dimen/menu_text_size" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginBottom="@dimen/menu_line_margin"
+                android:layout_marginTop="@dimen/menu_line_margin"
+                android:background="@color/loiti_white" />
+
+            <hu.artklikk.android.loiti.ui.core.LTextView
+                android:id="@+id/fragment_menu_faq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/menu_line_margin"
+                android:padding="@dimen/menu_text_padding"
+                android:text="@string/menu_faq"
+                android:textColor="@color/loiti_white"
+                android:textSize="@dimen/menu_text_size" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginBottom="@dimen/menu_line_margin"
+                android:layout_marginTop="@dimen/menu_line_margin"
+                android:background="@color/loiti_white" />
+
+            <hu.artklikk.android.loiti.ui.core.LTextView
+                android:id="@+id/fragment_menu_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/menu_line_margin"
+                android:padding="@dimen/menu_text_padding"
+                android:text="@string/menu_contact"
+                android:textColor="@color/loiti_white"
+                android:textSize="@dimen/menu_text_size" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginBottom="@dimen/menu_line_margin"
+                android:layout_marginTop="@dimen/menu_line_margin"
+                android:background="@color/loiti_white" />
+
+            <hu.artklikk.android.loiti.ui.core.LTextView
+                android:id="@+id/fragment_menu_terms_conditions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/menu_line_margin"
+                android:padding="@dimen/menu_text_padding"
+                android:text="@string/menu_terms_conditions"
+                android:textColor="@color/loiti_white"
+                android:textSize="@dimen/menu_text_size" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

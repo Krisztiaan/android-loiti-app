@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/hu.artklikk.android.loiti"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <hu.artklikk.android.loiti.ui.core.SquareRelativeLayout
+        android:id="@+id/fragment_gifts_basic_upper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:id="@+id/fragment_gift_basic_message_container"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/menu_size"
+            android:layout_alignParentBottom="true"
+            android:background="@color/loiti_gray_dark" >
+
+            <Space
+                android:id="@+id/fragment_gift_basic_message_square_left"
+                android:layout_width="@dimen/menu_size"
+                android:layout_height="@dimen/menu_size" />
+
+            <Space
+                android:id="@+id/fragment_gift_basic_message_square_right"
+                android:layout_width="@dimen/menu_size"
+                android:layout_height="@dimen/menu_size"
+                android:layout_alignParentRight="true" />
+
+            <hu.artklikk.android.loiti.ui.view.Stripes
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@id/fragment_gift_basic_message_square_right"
+                android:layout_toRightOf="@id/fragment_gift_basic_message_square_left"
+                android:alpha="0.25"
+                app:orientation="down"
+                app:stripeColor="@color/loiti_white_semitransparent"
+                app:stripeSize="8dp" />
+
+            <hu.artklikk.android.loiti.ui.core.LTextView
+                android:id="@+id/fragment_gift_basic_message"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@id/fragment_gift_basic_message_square_right"
+                android:layout_toRightOf="@id/fragment_gift_basic_message_square_left"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:paddingLeft="@dimen/header_left_padding"
+                android:paddingRight="@dimen/header_left_padding"
+                android:textAllCaps="true"
+                android:textColor="@color/loiti_white"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/fragment_gift_basic_message_container" >
+
+            <ImageView
+                android:id="@+id/fragment_gift_basic_thumbnail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/loiti_white"
+                android:scaleType="centerCrop" />
+
+            <hu.artklikk.android.loiti.ui.core.LTextView
+                android:id="@+id/fragment_gift_basic_header"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/menu_size"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/header_left_padding"
+                android:textColor="@color/loiti_gray"
+                android:textSize="@dimen/header_text_size"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </hu.artklikk.android.loiti.ui.core.SquareRelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/fragment_gifts_basic_upper"
+        android:background="@color/loiti_white"
+        android:paddingLeft="@dimen/menu_size"
+        android:paddingRight="@dimen/menu_size" >
+
+        <hu.artklikk.android.loiti.ui.view.Stripes
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.25"
+            app:stripeColor="@color/loiti_orange_semitransparent"
+            app:stripeSize="8dp" />
+
+        <hu.artklikk.android.loiti.ui.core.LTextView
+            android:id="@+id/fragment_gift_basic_visit_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:textColor="@color/loiti_gray"
+            android:textSize="120sp" />
+
+        <hu.artklikk.android.loiti.ui.core.LTextView
+            android:id="@+id/fragment_gift_basic_visit_count_head"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_above="@id/fragment_gift_basic_visit_count"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/gifts_visit_count_head"
+            android:textColor="@color/loiti_orange"
+            android:textSize="16sp" />
+
+        <hu.artklikk.android.loiti.ui.core.LTextView
+            android:id="@+id/fragment_gift_basic_visit_count_tail"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@id/fragment_gift_basic_visit_count"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/gifts_visit_count_tail"
+            android:textColor="@color/loiti_orange"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

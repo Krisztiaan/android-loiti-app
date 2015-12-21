@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="menu_size">50dp</dimen>
+    <dimen name="header_text_size">16sp</dimen>
+    <dimen name="header_left_padding">16dp</dimen>
+    <dimen name="registration_edittext_margin">30dp</dimen>
+    <dimen name="registration_edittext_padding">14dp</dimen>
+
+    <dimen name="slot_number_size">50sp</dimen>
+    <dimen name="slot_arrow_padding">14dp</dimen>
+    
+    <dimen name="far_screen_line_margin">10dp</dimen>
+    <dimen name="far_text_size">14sp</dimen>
+    <dimen name="far_text_padding">4dp</dimen>
+    
+    <dimen name="stripe_size_sparse">8dp</dimen>
+    
+    <item name="payment_checkbox_size_percent" type="fraction">43%</item>
+    
+    <dimen name="menu_line_margin">@dimen/far_screen_line_margin</dimen>
+    <dimen name="menu_text_size">@dimen/far_text_size</dimen>
+    <dimen name="menu_text_padding">@dimen/far_text_padding</dimen>
+    <dimen name="menu_content_padding">22dp</dimen>
+    
+    <dimen name="bill_icon_padding_small">16dp</dimen>
+    <dimen name="bill_icon_padding_large">18dp</dimen>
+
+</resources>

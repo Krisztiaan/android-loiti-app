@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dialog_review_out_area"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/loiti_white_semitransparent"
+    android:clickable="true" >
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="215dp"
+        android:layout_height="245dp"
+        android:layout_centerInParent="true"
+        android:background="@color/loiti_gray"
+        android:clickable="true" >
+
+        <hu.artklikk.android.loiti.ui.core.LTextView
+            android:id="@+id/dialog_review_cancel_button"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/loiti_orange"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/popup_cancel"
+            android:textColor="@color/loiti_white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <hu.artklikk.android.loiti.ui.core.LTextView
+            android:id="@+id/dialog_review_ok_button"
+            android:layout_height="62dp"
+            android:layout_above="@id/dialog_review_cancel_button"
+            android:layout_centerHorizontal="true"
+            app:layout_widthPercent="57%"
+            android:background="#88000000"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/dialog_ok_send"
+            android:textColor="@color/loiti_white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <hu.artklikk.android.loiti.ui.view.Stripes
+            android:id="@+id/dialog_review_stripe_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/dialog_review_ok_button"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/dialog_review_ok_button"
+            android:layout_toRightOf="@id/dialog_review_ok_button"
+            android:alpha="0.5"
+            app:orientation="down"
+            app:stripeColor="@color/loiti_white_semitransparent"
+            app:stripeSize="8dp" />
+
+        <hu.artklikk.android.loiti.ui.view.Stripes
+            android:id="@+id/dialog_review_stripe_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/dialog_review_ok_button"
+            android:layout_alignParentLeft="true"
+            android:layout_alignTop="@id/dialog_review_ok_button"
+            android:layout_toLeftOf="@id/dialog_review_ok_button"
+            android:alpha="0.5"
+            app:orientation="up"
+            app:stripeColor="@color/loiti_white_semitransparent"
+            app:stripeSize="8dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/dialog_review_ok_button" >
+
+            <hu.artklikk.android.loiti.ui.core.LTextView
+                android:id="@+id/dialog_review_content_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:text="@string/popup_review_header"
+                android:textColor="@color/loiti_white"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/dialog_review_content_header"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/dialog_review_content_left_arrow"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="20dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/left_arrow_white" />
+
+                <ViewFlipper
+                    android:id="@+id/dialog_review_content_slot"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" >
+
+                    <hu.artklikk.android.loiti.ui.core.LTextView
+                        android:id="@+id/item_slot_numbers_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:text="@string/slot_one"
+                        android:textColor="@color/loiti_white"
+                        android:textSize="@dimen/slot_number_size"
+                        android:textStyle="bold" />
+
+                    <hu.artklikk.android.loiti.ui.core.LTextView
+                        android:id="@+id/item_slot_numbers_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:text="@string/slot_two"
+                        android:textColor="@color/loiti_white"
+                        android:textSize="@dimen/slot_number_size"
+                        android:textStyle="bold" />
+
+                    <hu.artklikk.android.loiti.ui.core.LTextView
+                        android:id="@+id/item_slot_numbers_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:text="@string/slot_three"
+                        android:textColor="@color/loiti_white"
+                        android:textSize="@dimen/slot_number_size"
+                        android:textStyle="bold" />
+
+                    <hu.artklikk.android.loiti.ui.core.LTextView
+                        android:id="@+id/item_slot_numbers_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:text="@string/slot_four"
+                        android:textColor="@color/loiti_white"
+                        android:textSize="@dimen/slot_number_size"
+                        android:textStyle="bold" />
+
+                    <hu.artklikk.android.loiti.ui.core.LTextView
+                        android:id="@+id/item_slot_numbers_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:text="@string/slot_five"
+                        android:textColor="@color/loiti_white"
+                        android:textSize="@dimen/slot_number_size"
+                        android:textStyle="bold" />
+                </ViewFlipper>
+
+                <ImageView
+                    android:id="@+id/dialog_review_content_right_arrow"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="20dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/right_arrow_white" />
+            </LinearLayout>
+        </RelativeLayout>
+    </android.support.percent.PercentRelativeLayout>
+
+</RelativeLayout>

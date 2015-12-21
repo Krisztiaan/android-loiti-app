@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/hu.artklikk.android.loiti"
+    android:id="@+id/activity_profile_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/loiti_white" >
+
+    <hu.artklikk.android.loiti.ui.core.SquareFrameLayout
+        android:id="@+id/activity_profile_image_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:id="@+id/activity_profile_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/loiti_gray"
+            android:scaleType="centerCrop" />
+    </hu.artklikk.android.loiti.ui.core.SquareFrameLayout>
+
+    <FrameLayout
+        android:id="@+id/activity_profile_new_image_container"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/activity_profile_image_container"
+        android:background="@color/loiti_gray" >
+
+        <hu.artklikk.android.loiti.ui.core.LTextView
+            android:id="@+id/activity_profile_new_photo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/profile_new_photo"
+            android:textColor="@color/loiti_white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <hu.artklikk.android.loiti.ui.view.SquareStripes
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:alpha="0.5"
+            android:background="#44FFFFFF"
+            app:orientation="up"
+            app:squareBy="height"
+            app:stripeColor="@color/loiti_white_semitransparent"
+            app:stripeSize="6dp" />
+
+        <hu.artklikk.android.loiti.ui.view.SquareStripes
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:alpha="0.5"
+            android:background="#44FFFFFF"
+            app:orientation="down"
+            app:squareBy="height"
+            app:stripeColor="@color/loiti_white_semitransparent"
+            app:stripeSize="6dp" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/activity_profile_new_image_container"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/activity_profile_input_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="3"
+            android:background="@color/loiti_gray"
+            android:orientation="vertical"
+            android:padding="1dp" >
+
+            <hu.artklikk.android.loiti.ui.core.LEditText
+                android:id="@+id/activity_profile_name"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/loiti_white"
+                android:hint="@string/profile_name_hint"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                android:nextFocusForward="@+id/activity_profile_email"
+                android:padding="10dp"
+                android:textColor="@color/loiti_gray"
+                android:textColorHint="@color/loiti_gray_semitransparent"
+                android:textSize="16sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+
+            <hu.artklikk.android.loiti.ui.core.LEditText
+                android:id="@+id/activity_profile_email"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/loiti_white"
+                android:hint="@string/profile_email_hint"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:nextFocusForward="@+id/activity_profile_phone"
+                android:padding="10dp"
+                android:textColor="@color/loiti_gray"
+                android:textColorHint="@color/loiti_gray_semitransparent"
+                android:textSize="16sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+
+            <hu.artklikk.android.loiti.ui.core.LEditText
+                android:id="@+id/activity_profile_phone"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/loiti_white"
+                android:hint="@string/profile_phone_hint"
+                android:imeOptions="actionDone"
+                android:inputType="phone"
+                android:padding="10dp"
+                android:textColor="@color/loiti_gray"
+                android:textColorHint="@color/loiti_gray_semitransparent"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <hu.artklikk.android.loiti.ui.core.LTextView
+                android:id="@+id/activity_profile_change_password"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/profile_change_password"
+                android:textColor="@color/loiti_gray"
+                android:textSize="12sp" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <hu.artklikk.android.loiti.ui.core.LTextView
+                    android:id="@+id/activity_profile_save"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/profile_save"
+                    android:textColor="@color/loiti_orange"
+                    android:textSize="12sp" />
+
+                <ProgressBar
+                    android:id="@+id/activity_profile_save_progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/loiti_white"
+                    android:clickable="true"
+                    android:indeterminateOnly="true"
+                    android:visibility="gone" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

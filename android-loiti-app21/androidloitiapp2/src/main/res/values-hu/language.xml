@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="language_header_name">accept-language</string>
+    <string name="language_header_value">hu</string>
+    <string name="url_faq">http://husegp.appspot.com/admin/faq/hu.html</string>
+</resources>

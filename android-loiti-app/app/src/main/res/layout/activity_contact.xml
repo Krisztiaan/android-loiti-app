@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/loiti_white"
+    android:orientation="vertical" >
+
+    <hu.artklikk.android.loiti.ui.core.LTextView
+        android:id="@+id/activity_contact_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_size"
+        android:layout_marginBottom="10dp"
+        android:padding="@dimen/header_left_padding"
+        android:text="@string/contact_header"
+        android:textColor="@color/loiti_orange"
+        android:textSize="@dimen/header_text_size"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:id="@+id/activity_contact_map_container"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/loiti_gray" />
+
+            <hu.artklikk.android.loiti.ui.core.LTextView
+                android:id="@+id/activity_contact_venue_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="40dp"
+                android:textColor="@color/loiti_orange"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <hu.artklikk.android.loiti.ui.core.LTextView
+                android:id="@+id/activity_contact_venue_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="40dp"
+                android:textAllCaps="true"
+                android:textColor="@color/loiti_gray"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_margin="20dp"
+                android:background="@color/loiti_gray" />
+
+            <hu.artklikk.android.loiti.ui.core.LTextView
+                android:id="@+id/activity_contact_venue_address_first_line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:paddingLeft="40dp"
+                android:textAllCaps="true"
+                android:textColor="@color/loiti_orange"
+                android:textSize="14sp" />
+
+            <hu.artklikk.android.loiti.ui.core.LTextView
+                android:id="@+id/activity_contact_venue_address_second_line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:paddingLeft="40dp"
+                android:textAllCaps="true"
+                android:textColor="@color/loiti_orange"
+                android:textSize="14sp" />
+
+            <hu.artklikk.android.loiti.ui.core.LTextView
+                android:id="@+id/activity_contact_venue_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:paddingLeft="40dp"
+                android:textAllCaps="true"
+                android:textColor="@color/loiti_orange"
+                android:textSize="14sp" />
+
+            <hu.artklikk.android.loiti.ui.core.LTextView
+                android:id="@+id/activity_contact_venue_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:paddingLeft="40dp"
+                android:textAllCaps="true"
+                android:textColor="@color/loiti_orange"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

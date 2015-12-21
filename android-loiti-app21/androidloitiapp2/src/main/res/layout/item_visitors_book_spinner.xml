@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hu.artklikk.android.loiti.ui.core.LTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/menu_size"
+    android:background="@color/loiti_white"
+    android:gravity="center_vertical"
+    android:paddingLeft="@dimen/header_left_padding"
+    android:textColor="@color/loiti_gray"
+    android:textSize="16sp" />

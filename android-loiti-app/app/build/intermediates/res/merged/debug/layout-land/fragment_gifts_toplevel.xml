@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/fragment_gift_toplevel_thumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <hu.artklikk.android.loiti.ui.core.LTextView
+        android:id="@+id/fragment_gift_toplevel_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_size"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/header_left_padding"
+        android:textColor="@color/loiti_gray"
+        android:textSize="@dimen/header_text_size"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <hu.artklikk.android.loiti.ui.view.Stripes
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="214"
+            android:alpha="0.5"
+            app:stripeColor="@color/loiti_orange_semitransparent"
+            app:stripeSize="8dp" />
+
+        <hu.artklikk.android.loiti.ui.core.LTextView
+            android:id="@+id/fragment_gift_toplevel_description"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="286"
+            android:background="@color/loiti_white"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:padding="@dimen/header_left_padding"
+            android:textAllCaps="true"
+            android:textColor="@color/loiti_orange"
+            android:textSize="@dimen/header_text_size"
+            android:textStyle="bold" />
+
+        <hu.artklikk.android.loiti.ui.view.Stripes
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="214"
+            android:alpha="0.5"
+            app:orientation="down"
+            app:stripeColor="@color/loiti_orange_semitransparent"
+            app:stripeSize="8dp" />
+    </LinearLayout>
+
+</RelativeLayout>

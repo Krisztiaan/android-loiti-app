@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="Stripes">
+        <attr name="orientation" format="enum">
+            <enum name="up" value="0" />
+            <enum name="down" value="1" />
+        </attr>
+        <attr name="stripeColor" format="reference|color" />
+        <attr name="stripeSize" format="dimension"/>
+    </declare-styleable>
+    <declare-styleable name="SquareStripes">
+        <attr name="squareBy" format="enum">
+            <enum name="width" value="0" />
+            <enum name="height" value="1" />
+            <enum name="smallest" value="2" />
+        </attr>
+    </declare-styleable>
+
+</resources>
