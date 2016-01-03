@@ -1,8 +1,8 @@
 package hu.artklikk.android.loiti;
 
-import android.app.Application;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
+import android.support.multidex.MultiDexApplication;
 
 import hu.artklikk.android.loiti.backend.VenueEndpoint;
 import hu.artklikk.android.loiti.backend.dto.LoginRequest;
@@ -11,7 +11,7 @@ import hu.artklikk.android.loiti.ui.activity.BillActivity.BillingData;
 import hu.artklikk.android.loiti.ui.core.FontContainer;
 import hu.artklikk.android.loiti.utils.LoginRequestStore;
 
-public class LoitiApplication extends Application {
+public class LoitiApplication extends MultiDexApplication {
 	
 	private static SharedPreferences preferences;
 	private static LoginRequestStore loginStore;

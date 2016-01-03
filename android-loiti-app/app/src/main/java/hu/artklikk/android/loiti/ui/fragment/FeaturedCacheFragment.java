@@ -1,25 +1,26 @@
 package hu.artklikk.android.loiti.ui.fragment;
 
-import hu.artklikk.android.loiti.backend.VenueEndpoint;
-import hu.artklikk.android.loiti.backend.dto.Item;
-import hu.artklikk.android.loiti.backend.dto.ItemCategory;
-import hu.artklikk.android.loiti.backend.rest.core.RestCallFinishListener;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import android.app.Activity;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.support.v4.app.Fragment;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonParseException;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
 
-import android.app.Activity;
-import android.content.SharedPreferences;
-import android.os.Bundle;
-import android.preference.PreferenceManager;
-import android.support.v4.app.Fragment;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import hu.artklikk.android.loiti.backend.VenueEndpoint;
+import hu.artklikk.android.loiti.backend.dto.Item;
+import hu.artklikk.android.loiti.backend.dto.ItemCategory;
+import hu.artklikk.android.loiti.backend.rest.core.RestCallFinishListener;
 
 public class FeaturedCacheFragment extends Fragment {
 	
@@ -43,9 +44,9 @@ public class FeaturedCacheFragment extends Fragment {
 	private boolean isCompleted = false;
 	
 	@Override
-	public void onAttach(Activity activity) {
-		super.onAttach(activity);
-		callback = (FeaturedListCallback) activity;
+	public void onAttach(Context context) {
+		super.onAttach(context);
+		callback = (FeaturedListCallback) context;
 	}
 	
 	@Override

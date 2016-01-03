@@ -1,9 +1,9 @@
 package hu.artklikk.android.loiti.ui.widget;
 
-import hu.artklikk.android.loiti.R;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Parcel;
 import android.os.Parcelable;
 import android.util.AttributeSet;
 import android.view.GestureDetector;
@@ -17,6 +17,8 @@ import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
 import android.widget.ScrollView;
 import android.widget.ViewFlipper;
+
+import hu.artklikk.android.loiti.R;
 
 public class Slot extends ViewFlipper implements OnGestureListener, OnTouchListener {
 	
@@ -277,28 +279,60 @@ public class Slot extends ViewFlipper implements OnGestureListener, OnTouchListe
 		}
 		super.onRestoreInstanceState(BaseSavedState.EMPTY_STATE);
 	}
-	
-	protected static class SlotState extends BaseSavedState {
-		
+
+	protected static class SlotState extends BaseSavedState implements Parcelable {
+
+
+
 		protected static final String KEY_STATE = "KEY_STATE";
-		
+
 		private final int displayedViewIndex;
 		private final boolean isMoved;
-		
+
 		public SlotState(Parcelable superState, int displayedViewIndex, boolean isMoved) {
 			super(superState);
 			this.displayedViewIndex = displayedViewIndex;
 			this.isMoved = isMoved;
 		}
-		
+
 		public int getDisplayedViewIndex() {
 			return displayedViewIndex;
 		}
-		
+
 		public boolean isMoved() {
 			return isMoved;
 		}
-		
+
+
+		protected SlotState(Parcel in) {
+            super(in);
+			displayedViewIndex = in.readInt();
+			isMoved = in.readByte() != 0x00;
+		}
+
+		@Override
+		public int describeContents() {
+			return 0;
+		}
+
+		@Override
+		public void writeToParcel(Parcel dest, int flags) {
+			dest.writeInt(displayedViewIndex);
+			dest.writeByte((byte) (isMoved ? 0x01 : 0x00));
+		}
+
+		@SuppressWarnings("unused")
+		public static final Parcelable.Creator<SlotState> CREATOR = new Parcelable.Creator<SlotState>() {
+			@Override
+			public SlotState createFromParcel(Parcel in) {
+				return new SlotState(in);
+			}
+
+			@Override
+			public SlotState[] newArray(int size) {
+				return new SlotState[size];
+			}
+		};
 	}
 	
 }

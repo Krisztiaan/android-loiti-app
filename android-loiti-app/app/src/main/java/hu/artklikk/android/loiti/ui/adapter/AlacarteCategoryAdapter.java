@@ -1,14 +1,5 @@
 package hu.artklikk.android.loiti.ui.adapter;
 
-import hu.artklikk.android.loiti.R;
-import hu.artklikk.android.loiti.backend.VenueEndpoint;
-import hu.artklikk.android.loiti.backend.dto.Item;
-import hu.artklikk.android.loiti.backend.dto.ItemAvailability;
-import hu.artklikk.android.loiti.ui.adapter.AlacarteCategoryAdapter.ItemViewHolder;
-
-import java.util.List;
-import java.util.Locale;
-
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.RecyclerView.Adapter;
 import android.support.v7.widget.RecyclerView.ViewHolder;
@@ -19,6 +10,15 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.koushikdutta.ion.Ion;
+
+import java.util.List;
+import java.util.Locale;
+
+import hu.artklikk.android.loiti.R;
+import hu.artklikk.android.loiti.backend.VenueEndpoint;
+import hu.artklikk.android.loiti.backend.dto.Item;
+import hu.artklikk.android.loiti.backend.dto.ItemAvailability;
+import hu.artklikk.android.loiti.ui.adapter.AlacarteCategoryAdapter.ItemViewHolder;
 
 public class AlacarteCategoryAdapter extends Adapter<ItemViewHolder> {
 	
@@ -82,8 +82,7 @@ public class AlacarteCategoryAdapter extends Adapter<ItemViewHolder> {
 		}
 		View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_alacarte_sub, parent, false);
 		view.setLayoutParams(new RecyclerView.LayoutParams(params));
-		ItemViewHolder toReturn = new ItemViewHolder(view);
-		return toReturn;
+		return new ItemViewHolder(view);
 	}
 	
 	private RecyclerView.LayoutParams createLayoutParams(ViewGroup parent) {

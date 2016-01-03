@@ -15,7 +15,8 @@
             android:id="@+id/fragment_alacarte_category_header_thumbnail"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scaleType="centerCrop" />
+            android:scaleType="centerCrop"
+            android:transitionName="transition_alacarte_thumbnail"/>
         
         <hu.artklikk.android.loiti.ui.core.LTextView
             android:id="@+id/fragment_alacarte_category_header_name"
@@ -27,7 +28,8 @@
             android:paddingLeft="16dp"
             android:textColor="@color/loiti_orange"
             android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:transitionName="transition_alacarte_name"/>
 
         <hu.artklikk.android.loiti.ui.view.Stripes
             android:layout_height="match_parent"
@@ -36,7 +38,8 @@
             app:layout_widthPercent="30%"
             app:orientation="up"
             app:stripeColor="@color/loiti_white_semitransparent"
-            app:stripeSize="8dp" />
+            app:stripeSize="8dp"
+            android:transitionName="transition_alacarte_stripes"/>
         
     </android.support.percent.PercentRelativeLayout>
 

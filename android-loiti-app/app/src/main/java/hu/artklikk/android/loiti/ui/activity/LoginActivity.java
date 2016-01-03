@@ -1,5 +1,20 @@
 package hu.artklikk.android.loiti.ui.activity;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Patterns;
+import android.widget.EditText;
+
+import com.sromku.simple.fb.entities.Profile;
+import com.sromku.simple.fb.listeners.OnLogoutListener;
+
+import org.androidannotations.annotations.Click;
+import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.ViewById;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import hu.artklikk.android.loiti.LoitiApplication;
 import hu.artklikk.android.loiti.R;
 import hu.artklikk.android.loiti.backend.UserEndpoint;
@@ -12,21 +27,6 @@ import hu.artklikk.android.loiti.social.FBHelper;
 import hu.artklikk.android.loiti.social.FBHelper.OnLoginCallback;
 import hu.artklikk.android.loiti.ui.core.MenuActivity;
 import hu.artklikk.android.loiti.ui.widget.SlotMachine;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import org.androidannotations.annotations.Click;
-import org.androidannotations.annotations.EActivity;
-import org.androidannotations.annotations.ViewById;
-
-import android.content.Intent;
-import android.os.Bundle;
-import android.util.Patterns;
-import android.widget.EditText;
-
-import com.sromku.simple.fb.entities.Profile;
-import com.sromku.simple.fb.listeners.OnLogoutListener;
 
 @EActivity(R.layout.activity_login)
 public class LoginActivity extends MenuActivity {
@@ -112,21 +112,6 @@ public class LoginActivity extends MenuActivity {
 	}
 	
 	private OnLogoutListener logoutCallback = new OnLogoutListener() {
-		
-		@Override
-		public void onFail(String reason) {
-			
-		}
-		
-		@Override
-		public void onException(Throwable throwable) {
-			
-		}
-		
-		@Override
-		public void onThinking() {
-			
-		}
 		
 		@Override
 		public void onLogout() {

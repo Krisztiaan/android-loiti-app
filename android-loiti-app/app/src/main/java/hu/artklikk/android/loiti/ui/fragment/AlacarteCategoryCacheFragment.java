@@ -1,12 +1,7 @@
 package hu.artklikk.android.loiti.ui.fragment;
 
-import hu.artklikk.android.loiti.backend.ItemEndpoint;
-import hu.artklikk.android.loiti.backend.dto.ItemCategory;
-import hu.artklikk.android.loiti.backend.rest.core.RestCallFinishListener;
-
-import java.util.List;
-
 import android.app.Activity;
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -14,8 +9,13 @@ import android.support.v4.app.Fragment;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonParseException;
-import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
+
+import java.util.List;
+
+import hu.artklikk.android.loiti.backend.ItemEndpoint;
+import hu.artklikk.android.loiti.backend.dto.ItemCategory;
+import hu.artklikk.android.loiti.backend.rest.core.RestCallFinishListener;
 
 public class AlacarteCategoryCacheFragment extends Fragment {
 	
@@ -23,8 +23,8 @@ public class AlacarteCategoryCacheFragment extends Fragment {
 	private static final String KEY_ALACARTE_CATEGORY_CACHE = "KEY_ALACARTE_CATEGORY_CACHE";
 	
 	public interface CategoryListCallback {
-		public void onCategoryListReady(List<ItemCategory> categoryList);
-		public void onCategoryCacheListReady(List<ItemCategory> categoryList);
+		void onCategoryListReady(List<ItemCategory> categoryList);
+		void onCategoryCacheListReady(List<ItemCategory> categoryList);
 	}
 	
 	private CategoryListCallback callback;
@@ -33,9 +33,9 @@ public class AlacarteCategoryCacheFragment extends Fragment {
 	private List<ItemCategory> categoryCacheList;
 	
 	@Override
-	public void onAttach(Activity activity) {
-		super.onAttach(activity);
-		callback = (CategoryListCallback) activity;
+	public void onAttach(Context context) {
+		super.onAttach(context);
+		callback = (CategoryListCallback) context;
 	}
 	
 	@Override
@@ -50,11 +50,7 @@ public class AlacarteCategoryCacheFragment extends Fragment {
 				List<ItemCategory> categoryCacheList = null;
 				try {
 					categoryCacheList = new Gson().fromJson(cacheString, new TypeToken<List<ItemCategory>>() {}.getType());
-				}
-				catch (JsonSyntaxException e) {
-					categoryCacheList = null;
-				}
-				catch (JsonParseException e) {
+				} catch (JsonParseException e) {
 					categoryCacheList = null;
 				}
 				if (categoryCacheList != null && !categoryCacheList.isEmpty()) {

@@ -1,14 +1,42 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.neenbedankt.android-apt'
 
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+    maven { url 'http://repo.spring.io/milestone' }
+    mavenCentral()
+}
+
+apt {
+    arguments {
+        androidManifestFile variant.outputs.collect()[0].processResources.manifestFile
+        resourcePackageName 'hu.artklikk.android.loiti'
+    }
+}
+
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.2"
+    buildToolsVersion '23.0.2'
 
     defaultConfig {
-        applicationId "hu.artklikk.android.loiti"
+        applicationId 'hu.artklikk.android.loiti'
         minSdkVersion 15
         targetSdkVersion 23
+        multiDexEnabled true
+    }
+
+    productFlavors {
+        // Define separate dev and prod product flavors.
+        dev {
+            // dev utilizes minSDKVersion = 21 to allow the Android gradle plugin
+            // to pre-dex each module and produce an APK that can be tested on
+            // Android Lollipop without time consuming dex merging processes.
+            minSdkVersion 21
+        }
+        prod {
+            // The actual minSdkVersion for the application.
+            minSdkVersion 15
+        }
     }
 
     buildTypes {
@@ -17,32 +45,40 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
 }
 
 def AAVersion = '3.3.2'
 
 dependencies {
-    compile 'com.android.support:support-v4:23.1.1'
-    compile 'com.google.code.gson:gson:2.4'
-    compile files('libs/androidannotations-api-3.2.jar')
-    compile files('libs/androidasync-2.1.6.jar')
-    compile files('libs/ion-2.1.6.jar')
-    compile files('libs/jackson-annotations-2.4.0.jar')
-    compile files('libs/jackson-core-2.4.4.jar')
-    compile files('libs/jackson-databind-2.4.4.jar')
-    compile files('libs/spring-web-4.1.5.RELEASE.jar')
     compile files('libs/zbar.jar')
+
+    compile 'org.springframework.android:spring-android-core:1.0.1.RELEASE'
+
+    compile 'com.koushikdutta.ion:ion:2.+'
+    compile 'com.koushikdutta.async:androidasync:2.+'
+
+    compile 'com.fasterxml.jackson.core:jackson-core:2.4.6'
+    compile 'com.fasterxml.jackson.core:jackson-annotations:2.4.6'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.4.6'
 
     compile 'com.google.zxing:core:3.2.1'
     compile 'com.android.support:multidex:1.0.1'
     compile 'com.android.support:appcompat-v7:23.1.1'
     compile 'com.android.support:support-annotations:23.1.1'
-    compile 'com.android.support:support-v13:23.1.1'
     compile 'com.android.support:support-v4:23.1.1'
+    compile 'com.android.support:support-v13:23.1.1'
     compile 'com.android.support:cardview-v7:23.1.1'
     compile 'com.android.support:recyclerview-v7:23.1.1'
     compile 'com.android.support:percent:23.1.1'
-    compile 'com.google.android.gms:play-services:8.3.0'
+    compile 'com.google.code.gson:gson:2.4'
+    compile 'com.google.android.gms:play-services:8.4.0'
 
     compile 'javax.annotation:javax.annotation-api:1.2'
     apt "org.androidannotations:androidannotations:$AAVersion"

@@ -1,29 +1,20 @@
 package hu.artklikk.android.loiti.backend.rest.core;
 
-import hu.artklikk.android.loiti.backend.dto.ErrorInfo;
+import android.os.AsyncTask;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.koushikdutta.async.util.Charsets;
+import com.squareup.okhttp.MediaType;
+import com.squareup.okhttp.Request;
+import com.squareup.okhttp.RequestBody;
+import com.squareup.okhttp.Response;
+import com.squareup.okhttp.ResponseBody;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.client.methods.HttpDelete;
-import org.apache.http.client.methods.HttpEntityEnclosingRequestBase;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.client.methods.HttpPut;
-import org.apache.http.client.methods.HttpRequestBase;
-import org.apache.http.entity.StringEntity;
-
-import android.os.AsyncTask;
-
-import com.fasterxml.jackson.core.JsonParseException;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.JsonMappingException;
-import com.squareup.okhttp.Request;
-import com.squareup.okhttp.Response;
-import com.squareup.okhttp.ResponseBody;
+import hu.artklikk.android.loiti.backend.dto.ErrorInfo;
 
 /**
  * This task can execute a REST request. Can only runs only one request at time
@@ -49,7 +40,9 @@ public class RestExecuteTask extends AsyncTask<String, Void, Object> {
 	private static final int EXCEPTION_IDX = 1;
 
 	/** The HTTP method which will execute by the HTTP client. */
-	private Request.Builder requestMethod;
+	private Request requestMethod;
+
+	private Request.Builder requestBuilder;
 
 	/**
 	 * The request object which from create the JSON body of the http request.
@@ -109,35 +102,40 @@ public class RestExecuteTask extends AsyncTask<String, Void, Object> {
 		String restUrl = url[0];
 		requestMethod = createHttpRequestMethod(httpMethod, restUrl);
 
-		// passes the request to a string builder/entity
-		if (request != null
-				&& requestMethod instanceof HttpEntityEnclosingRequestBase) {
-
-			StringEntity se = null;
-			try {
-				String json = JsonMapper.getMapper()
-						.writeValueAsString(request);
-				
-				se = new StringEntity(json, "UTF-8");
-				
-				((HttpEntityEnclosingRequestBase) requestMethod).setEntity(se);
-			} catch (UnsupportedEncodingException e) {
-				return returnWithException(result, e);
-			} catch (JsonProcessingException e) {
-				e.printStackTrace();
-			}
-
-			
-		}
-
 		// execute request
 		Response httpResponse;
 		try {
-            requestMethod.build();
-			httpResponse = restBase.getHttpClient().(requestMethod);
+            requestMethod = requestBuilder.build();
+			httpResponse = restBase.getHttpClient().newCall(requestMethod).execute();
 		} catch (IOException e) {
 			return returnWithException(result, e);
 		}
+
+        // passes the request to a string builder/entity
+        if (request != null) {
+
+            String se = null;
+            try {
+                byte[] json = JsonMapper.getMapper()
+                        .writeValueAsBytes(request);
+
+                se = new String(json, Charsets.UTF_8);
+
+                switch (httpMethod) {
+
+                    case POST:
+                     requestBuilder.post().setEntity(se);
+                        break;
+
+                }
+            } catch (UnsupportedEncodingException e) {
+                return returnWithException(result, e);
+            } catch (JsonProcessingException e) {
+                e.printStackTrace();
+            }
+
+
+        }
 
 		// check status
 		int status = httpResponse.code();
@@ -148,7 +146,7 @@ public class RestExecuteTask extends AsyncTask<String, Void, Object> {
 			ErrorInfo errorInfo = null;
 			if (resEntity != null) {
 				try {
-					errorInfo = JsonMapper.getMapper().readValue(resEntity.getContent(), ErrorInfo.class);
+					errorInfo = JsonMapper.getMapper().readValue(resEntity.string(), ErrorInfo.class);
 				} catch (IllegalStateException | IOException e) {
 					e.printStackTrace();
 				}
@@ -181,7 +179,7 @@ public class RestExecuteTask extends AsyncTask<String, Void, Object> {
 		Object response = null;
 		try {
 			response = JsonMapper.getMapper()
-					.readValue(resEntity.getContent(), responseClazz);
+					.readValue(resEntity.string(), responseClazz);
 			
 		} catch (IllegalStateException | IOException e) {
 			e.printStackTrace();
@@ -239,8 +237,9 @@ public class RestExecuteTask extends AsyncTask<String, Void, Object> {
 	 * request. It's likely the try-catches final part.
 	 */
 	private void doBackgroundFinalPart() {
-		if (requestMethod != null)
-			requestMethod.abort();
+		if (requestMethod != null) {
+			// TODO: 12/22/2015 Need something?
+		}
 	}
 
 	/**
@@ -254,14 +253,16 @@ public class RestExecuteTask extends AsyncTask<String, Void, Object> {
 	 * 
 	 * @return New HTTP method request object.
 	 */
-	private Request.Builder createHttpRequestMethod(HttpMethod method,
+	private Request createHttpRequestMethod(HttpMethod method,
 			String url) {
-		Request.Builder request = new Request.Builder();
-		request.url(url);
+		requestBuilder = new Request.Builder();
+		requestBuilder.url(url);
 
-		restBase.setHeader(request);
+		requestBuilder.post(RequestBody.create(MediaType.parse()))
 
-		return request;
+		restBase.setHeader(requestBuilder);
+
+		return requestBuilder.build();
 	}
 
 	@Override
