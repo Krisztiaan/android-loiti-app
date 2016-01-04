@@ -8,8 +8,8 @@ import hu.artklikk.android.loiti.backend.rest.core.RestBase;
 public class NonStatefulRest extends RestBase {
 
 	@Override
-	protected void setHeader(Request.Builder requestBuilder) {
-		super.setHeader(requestBuilder);
+	protected void setHeaderOnRequestBuilder(Request.Builder requestBuilder) {
+		super.setHeaderOnRequestBuilder(requestBuilder);
 		requestBuilder.header("Accept", "application/json");
 		requestBuilder.header("Content-type", "application/json");
 		requestBuilder.header("charset", "utf-8");

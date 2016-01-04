@@ -1,6 +1,7 @@
 package hu.artklikk.android.loiti.backend.rest.core;
 
 import android.os.AsyncTask;
+import android.support.annotation.Nullable;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -12,7 +13,6 @@ import com.squareup.okhttp.Response;
 import com.squareup.okhttp.ResponseBody;
 
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 
 import hu.artklikk.android.loiti.backend.dto.ErrorInfo;
 
@@ -100,16 +100,6 @@ public class RestExecuteTask extends AsyncTask<String, Void, Object> {
 
 		// create HTTP post method
 		String restUrl = url[0];
-		requestMethod = createHttpRequestMethod(httpMethod, restUrl);
-
-		// execute request
-		Response httpResponse;
-		try {
-            requestMethod = requestBuilder.build();
-			httpResponse = restBase.getHttpClient().newCall(requestMethod).execute();
-		} catch (IOException e) {
-			return returnWithException(result, e);
-		}
 
         // passes the request to a string builder/entity
         if (request != null) {
@@ -121,21 +111,23 @@ public class RestExecuteTask extends AsyncTask<String, Void, Object> {
 
                 se = new String(json, Charsets.UTF_8);
 
-                switch (httpMethod) {
+				requestMethod = createHttpRequestMethod(httpMethod, restUrl, RequestBody.create(MediaType.parse("application/json"), se));
 
-                    case POST:
-                     requestBuilder.post().setEntity(se);
-                        break;
-
-                }
-            } catch (UnsupportedEncodingException e) {
-                return returnWithException(result, e);
             } catch (JsonProcessingException e) {
-                e.printStackTrace();
+                return returnWithException(result, e);
             }
+        } else {
+			requestMethod = createHttpRequestMethod(httpMethod, restUrl, null);
+		}
 
-
-        }
+		// execute request
+		Response httpResponse;
+		try {
+			requestMethod = requestBuilder.build();
+			httpResponse = restBase.getHttpClient().newCall(requestMethod).execute();
+		} catch (IOException e) {
+			return returnWithException(result, e);
+		}
 
 		// check status
 		int status = httpResponse.code();
@@ -244,7 +236,7 @@ public class RestExecuteTask extends AsyncTask<String, Void, Object> {
 
 	/**
 	 * HTTP method creator. Create a the wanted method and sets the header with
-	 * {@link RestBase#setHeader(com.squareup.okhttp.Request.Builder)} method.
+	 * {@link RestBase#setHeaderOnRequestBuilder(com.squareup.okhttp.Request.Builder)} method.
 	 * 
 	 * @param method
 	 *            The wanted HTTP method.
@@ -254,13 +246,25 @@ public class RestExecuteTask extends AsyncTask<String, Void, Object> {
 	 * @return New HTTP method request object.
 	 */
 	private Request createHttpRequestMethod(HttpMethod method,
-			String url) {
+			String url, @Nullable RequestBody requestBody) {
 		requestBuilder = new Request.Builder();
 		requestBuilder.url(url);
 
-		requestBuilder.post(RequestBody.create(MediaType.parse()))
+		switch (method) {
+			case GET:
+				requestBuilder.get();
+				break;
+			case POST:
+				requestBuilder.post(requestBody);
+				break;
+			case DELETE:
+				requestBuilder.delete(requestBody);
+				break;
+			case PUT:
+				requestBuilder.put(requestBody);
+		}
 
-		restBase.setHeader(requestBuilder);
+		restBase.setHeaderOnRequestBuilder(requestBuilder);
 
 		return requestBuilder.build();
 	}

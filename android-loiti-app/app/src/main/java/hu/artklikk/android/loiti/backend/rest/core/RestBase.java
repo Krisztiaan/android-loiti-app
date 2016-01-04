@@ -158,7 +158,7 @@ public abstract class RestBase {
 	 * @param request
 	 *            Set header parameter on this request.
 	 */
-	protected void setHeader(Request.Builder request) {
+	protected void setHeaderOnRequestBuilder(Request.Builder request) {
 		if (languageHeaderName != null && languageHeaderValue != null && !languageHeaderName.trim().isEmpty()
 				&& !languageHeaderValue.trim().isEmpty()) {
 			request.addHeader(languageHeaderName, languageHeaderValue);
